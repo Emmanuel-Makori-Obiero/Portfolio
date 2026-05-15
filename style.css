@@ -1,37 +1,302 @@
-.Navigation {
-  display: flex;
-  list-style-type: none;
-  gap: 10px;
-  justify-content: space-between;
-  justify-content: flex-end;
-  align-items: center;
+/* Portfolio styles */
+html {
+  scroll-behavior: smooth;
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  top: 0;
+.nav-link {
+  position: relative;
+  transition: color 0.2s;
 }
-
-body {
-  background-color: #121212;
-  color: white;
+.nav-link:hover {
+  color: #fff;
 }
-
-.Navigation a {
-  text-decoration: none;
-  background-color: blanchedalmond;
-  text-align: center;
-  color: black;
-  padding: 5px;
-  border-radius: 2px;
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #818cf8, #e879f9);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
 }
-
-.Navigation a:hover {
-  background-color: blue;
-  color: black;
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
-
-.navigation img {
-  padding: 10px;
-  border-radius: 15px;
+/* Section styles */
+.section-label {
+  display: inline-flex;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+}
+.section-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+  line-height: 1.05;
+  color: #fff;
+}
+/* Stat / info cards */
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  backdrop-filter: blur(8px);
+}
+.info-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+  transform-style: preserve-3d;
+}
+.info-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(129, 140, 248, 0.5);
+}
+.info-key {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #94a3b8;
+}
+.info-val {
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.35rem;
+  font-size: 1.05rem;
+}
+/* Education cards */
+.edu-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+.edu-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mx, 50%) var(--my, 50%),
+    rgba(129, 140, 248, 0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.edu-card:hover::before {
+  opacity: 1;
+}
+.edu-card:hover {
+  border-color: rgba(129, 140, 248, 0.4);
+}
+.edu-year {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #818cf8;
+}
+.edu-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.edu-org {
+  color: #cbd5e1;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+.edu-tag {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: #e2e8f0;
+}
+/* Skill cards */
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.skill-card:hover {
+  border-color: rgba(232, 121, 249, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.skill-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+}
+.skill-desc {
+  color: #94a3b8;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+}
+/* Project card */
+.project-card {
+  display: block;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.08),
+    rgba(232, 121, 249, 0.05)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 2rem;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.project-card:hover {
+  border-color: rgba(129, 140, 248, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.15),
+    rgba(232, 121, 249, 0.1)
+  );
+}
+.chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Contact */
+.contact-card {
+  display: block;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.contact-card:hover {
+  border-color: rgba(129, 140, 248, 0.5);
+  background: rgba(255, 255, 255, 0.07);
+}
+.form-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+.form-input:focus {
+  border-color: #818cf8;
+}
+/* 3D tilt card (hero) */
+.tilt-card {
+  perspective: 1000px;
+}
+.tilt-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+.tilt-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+  pointer-events: none;
+}
+.tilt-card:hover .tilt-shine {
+  transform: translateX(100%);
+}
+/* Generic data-tilt for cards */
+[data-tilt] {
+  perspective: 800px;
+  will-change: transform;
+}
+/* Blob animation */
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 40px) scale(0.95);
+  }
+}
+.animate-blob {
+  animation: blob 18s infinite ease-in-out;
+}
+.animation-delay-2000 {
+  animation-delay: -6s;
+}
+.animation-delay-4000 {
+  animation-delay: -12s;
+}
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }

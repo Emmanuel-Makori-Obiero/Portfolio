@@ -2,170 +2,471 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.6" />
-    <title>Emmanuel Makori Obiero|portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmanuel Makori Obiero — Software Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Emmanuel Makori Obiero — software developer building ethical, AI-driven solutions."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header>
-      <div class="navigation">
-        <nav class="nav">
-          <img src="images/Image.jpeg" height="80px" width="80px" />
-          <div class="Navigation">
-            <ul class="Navigation">
-              <li><a href="#About me"> About Me</a></li>
-              <li>
-                <a href="#Educational Background">Educational Background</a>
-              </li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#Career Goals">Career Goals</a></li>
-              <li><a href="#Contact info">Contact info</a></li>
-            </ul>
-          </div>
-        </nav>
+  <body
+    class="bg-[#0a0a0f] text-slate-100 font-[Inter] antialiased overflow-x-hidden"
+  >
+    <!-- Animated background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute -top-32 -left-32 w-[40rem] h-[40rem] rounded-full bg-indigo-600/20 blur-3xl animate-blob"
+      ></div>
+      <div
+        class="absolute top-1/2 -right-32 w-[40rem] h-[40rem] rounded-full bg-fuchsia-600/20 blur-3xl animate-blob animation-delay-2000"
+      ></div>
+      <div
+        class="absolute bottom-0 left-1/3 w-[35rem] h-[35rem] rounded-full bg-cyan-500/20 blur-3xl animate-blob animation-delay-4000"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.15),transparent_50%)]"
+      ></div>
+    </div>
+    <!-- Nav -->
+    <nav
+      class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#0a0a0f]/60 border-b border-white/5"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a
+          href="#top"
+          class="font-[Space_Grotesk] font-bold text-lg tracking-tight"
+        >
+          <span class="text-white">EMO</span
+          ><span class="text-indigo-400">.</span>
+        </a>
+        <div
+          class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300"
+        >
+          <a href="#about" class="nav-link">About</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <a
+          href="#contact"
+          class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black text-sm font-semibold hover:scale-105 transition-transform"
+        >
+          Hire me →
+        </a>
       </div>
-    </header>
-    <section id="About">
-      <h2>Emmanuel Makori Obiero|portfolio</h2>
+    </nav>
+    <!-- Hero -->
+    <section
+      id="top"
+      class="relative min-h-screen flex items-center px-6 pt-24"
+    >
+      <div
+        class="max-w-6xl mx-auto w-full grid md:grid-cols-5 gap-12 items-center"
+      >
+        <div class="md:col-span-3 space-y-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+            ></span>
+            Available for opportunities
+          </div>
+          <h1
+            class="font-[Space_Grotesk] font-bold text-5xl md:text-7xl leading-[0.95] tracking-tight"
+          >
+            Emmanuel<br />
+            Makori
+            <span
+              class="bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent"
+              >Obiero</span
+            >
+          </h1>
+          <p class="text-xl md:text-2xl font-semibold text-slate-200">
+            Software Developer · AI Builder · Future Founder
+          </p>
+          <p
+            class="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed"
+          >
+            Building ethical, AI-driven products that fuse
+            <span class="text-white font-semibold">VR</span>,
+            <span class="text-white font-semibold">biometrics</span>, and
+            <span class="text-white font-semibold">human intuition</span> to
+            solve real-world problems.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a
+              href="#projects"
+              class="px-6 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform shadow-lg shadow-white/10"
+              >View Projects</a
+            >
+            <a
+              href="#contact"
+              class="px-6 py-3 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition"
+              >Get in touch</a
+            >
+          </div>
+          <!-- Recruiter quick-stats -->
+          <div class="grid grid-cols-3 gap-4 pt-8 max-w-md">
+            <div class="stat-card">
+              <div class="text-2xl font-bold text-white">5+</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wider">
+                Certifications
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="text-2xl font-bold text-white">8+</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wider">
+                Core Skills
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="text-2xl font-bold text-white">1</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wider">
+                Live Project
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3D Card -->
+        <div class="md:col-span-2 flex justify-center">
+          <div class="tilt-card group" data-tilt>
+            <div
+              class="tilt-inner relative w-72 h-96 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-cyan-500"
+              ></div>
+              <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.4),transparent_60%)]"
+              ></div>
+              <div
+                class="absolute inset-0 flex flex-col justify-between p-7 text-white"
+              >
+                <div>
+                  <div class="text-xs uppercase tracking-[0.3em] opacity-80">
+                    Portfolio
+                  </div>
+                  <div
+                    class="mt-2 font-[Space_Grotesk] text-3xl font-bold leading-tight"
+                  >
+                    Emmanuel<br />Makori
+                  </div>
+                </div>
+                <div>
+                  <div class="text-xs uppercase tracking-widest opacity-70">
+                    Role
+                  </div>
+                  <div class="font-bold text-lg">Software Developer</div>
+                  <div
+                    class="mt-3 text-xs uppercase tracking-widest opacity-70"
+                  >
+                    Focus
+                  </div>
+                  <div class="font-semibold">AI · VR · Biometrics</div>
+                </div>
+              </div>
+              <div class="tilt-shine"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <hr />
-    <h3><a name="About me">About me</a></h3>
-    <p>
-      I am a software developer with a mission to build ethical, AI-driven
-      solutions that augment human capabilities. My goal is to launch a startup
-      that integrates advanced technologies like Virtual Reality and biometric
-      analysis to solve complex real-world problems.
-    </p>
-    <hr />
-    <h2><a name="Educational Background">Educational Background</a></h2>
-    <ul>
-      <li>Kcpe certificate (2020) - Nairobi Primary School</li>
-      <li>Kcse certificate (2025) - Moi Forces Nairobi</li>
-      <li>
-        ITE(Information Technology Essentials) (2026) - AFRALTI(African Advanced
-        Level TelecommunicationsInstitute)
-      </li>
-      <li>
-        ICDL(International Certification of Digital Literacy) 1 and 2(2026) -
-        Kenyatta University
-      </li>
-      <li>Software dvelopment bootcamp(2026) - GOMYCODE</li>
-    </ul>
-    <table border="2">
-      <tr>
-        <th>Certificate</th>
-        <th>Year</th>
-      </tr>
-      <tr>
-        <td>Software development(in progress)</td>
-        <td>GOMYCODE</td>
-      </tr>
-      <tr>
-        <td>ICDL</td>
-        <td>Kenyatta University</td>
-      </tr>
-      <tr>
-        <td>ITE</td>
-        <td>AFRALTI</td>
-      </tr>
-      <tr>
-        <td>KCSE</td>
-        <td>MOI Forces</td>
-      </tr>
-      <tr>
-        <td>KCPE</td>
-        <td>Nairobi Primary</td>
-      </tr>
-    </table>
-    <hr />
-    <h2><a name="skills">skills</a></h2>
-    <ul>
-      <li>chess</li>
-      <li>Computer hardware repair</li>
-      <p>
-        <li>use of computer packages which are:</li>
-        <li>Microsoft Word</li>
-        <li>Microsoft Excel</li>
-        <li>Microsoft Power BI</li>
-      </p>
-      <li>Digital Security Consulting</li>
-      <li>Product strategy</li>
-    </ul>
-    <hr />
-    <h2><a name="Career Goals">Career Goals</a></h2>
-    <p>
-      To leverage my foundation in hardware (ITE) and software development to
-      launch a tech startup that creates ethical, AI-driven applications. I aim
-      to design systems that bridge the gap between human intuition and machine
-      efficiency, starting with my architectural work on the Eduvance project.
-    </p>
-    <hr />
-    <h2>Sample project prototypes</h2>
-    <p>
-      Eduvance -
-      <a href="https://eduvancereal.base44.app/">Press to go to app </a>
-      About(This is an educative app made to simplify education for learners by
-      intergrating legacy methods with digatal methods and having features such
-      as memonics,songs,memory and reasoning games,animation creator and a
-      creativity space etc.. it is aimed in making education fun for learners
-      and also enable them to acquire skills and also social confidence
-    </p>
-    <hr />
-    <h2><a name="Contact info">Contact info</a></h2>
-    <ul>
-      <li>
-        Email:
-        <a href="mailto:elmakobiero@gmail.com" target="_blank"
-          >elmakobiero@gmail.com</a
+    <!-- About -->
+    <section id="about" class="py-24 px-6 reveal">
+      <div class="max-w-6xl mx-auto">
+        <div class="section-label">01 — About</div>
+        <h2 class="section-title">
+          Software developer with a
+          <span class="text-indigo-400">mission</span>.
+        </h2>
+        <div class="mt-10 grid md:grid-cols-2 gap-10">
+          <p class="text-lg text-slate-300 leading-relaxed">
+            I build
+            <span class="font-bold text-white"
+              >ethical, AI-driven solutions</span
+            >
+            that augment human capabilities. My goal: launch a startup
+            integrating
+            <span class="font-bold text-white">Virtual Reality</span> and
+            <span class="font-bold text-white">biometric analysis</span> to
+            solve complex real-world problems.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="info-card">
+              <div class="info-key">Location</div>
+              <div class="info-val">Nairobi, Kenya</div>
+            </div>
+            <div class="info-card">
+              <div class="info-key">Focus</div>
+              <div class="info-val">AI · VR · Hardware</div>
+            </div>
+            <div class="info-card">
+              <div class="info-key">Status</div>
+              <div class="info-val">Open to roles</div>
+            </div>
+            <div class="info-card">
+              <div class="info-key">Stack</div>
+              <div class="info-val">Full-stack + AI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Education -->
+    <section id="education" class="py-24 px-6 reveal">
+      <div class="max-w-6xl mx-auto">
+        <div class="section-label">02 — Education</div>
+        <h2 class="section-title">Credentials & training.</h2>
+        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="edu-card" data-tilt>
+            <div class="edu-year">2026</div>
+            <div class="edu-title">Software Development Bootcamp</div>
+            <div class="edu-org">GOMYCODE</div>
+            <div class="edu-tag">In progress</div>
+          </div>
+          <div class="edu-card" data-tilt>
+            <div class="edu-year">2026</div>
+            <div class="edu-title">ICDL 1 & 2</div>
+            <div class="edu-org">Kenyatta University</div>
+            <div class="edu-tag">Digital Literacy</div>
+          </div>
+          <div class="edu-card" data-tilt>
+            <div class="edu-year">2026</div>
+            <div class="edu-title">ITE — Information Technology Essentials</div>
+            <div class="edu-org">AFRALTI</div>
+            <div class="edu-tag">Hardware</div>
+          </div>
+          <div class="edu-card" data-tilt>
+            <div class="edu-year">2025</div>
+            <div class="edu-title">KCSE Certificate</div>
+            <div class="edu-org">Moi Forces Nairobi</div>
+            <div class="edu-tag">Secondary</div>
+          </div>
+          <div class="edu-card" data-tilt>
+            <div class="edu-year">2020</div>
+            <div class="edu-title">KCPE Certificate</div>
+            <div class="edu-org">Nairobi Primary School</div>
+            <div class="edu-tag">Primary</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="py-24 px-6 reveal">
+      <div class="max-w-6xl mx-auto">
+        <div class="section-label">03 — Skills</div>
+        <h2 class="section-title">What I bring to the table.</h2>
+        <div class="mt-12 grid md:grid-cols-3 gap-5">
+          <div class="skill-card" data-tilt>
+            <div class="skill-icon">⚡</div>
+            <div class="skill-title">Software Development</div>
+            <div class="skill-desc">
+              Building full-stack apps with modern tooling.
+            </div>
+          </div>
+          <div class="skill-card" data-tilt>
+            <div class="skill-icon">🛡️</div>
+            <div class="skill-title">Digital Security Consulting</div>
+            <div class="skill-desc">
+              Advising on security posture and best practices.
+            </div>
+          </div>
+          <div class="skill-card" data-tilt>
+            <div class="skill-icon">🧩</div>
+            <div class="skill-title">Product Strategy</div>
+            <div class="skill-desc">
+              Translating ideas into shippable roadmaps.
+            </div>
+          </div>
+          <div class="skill-card" data-tilt>
+            <div class="skill-icon">🔧</div>
+            <div class="skill-title">Computer Hardware Repair</div>
+            <div class="skill-desc">
+              Hands-on diagnostics and component replacement.
+            </div>
+          </div>
+          <div class="skill-card" data-tilt>
+            <div class="skill-icon">📊</div>
+            <div class="skill-title">Microsoft Suite</div>
+            <div class="skill-desc">Word · Excel · Power BI for analytics.</div>
+          </div>
+          <div class="skill-card" data-tilt>
+            <div class="skill-icon">♟️</div>
+            <div class="skill-title">Strategic Thinking</div>
+            <div class="skill-desc">
+              Competitive chess sharpens problem-solving.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="py-24 px-6 reveal">
+      <div class="max-w-6xl mx-auto">
+        <div class="section-label">04 — Projects</div>
+        <h2 class="section-title">Selected work.</h2>
+        <div class="mt-12">
+          <a
+            href="https://eduvancereal.base44.app/"
+            target="_blank"
+            rel="noopener"
+            class="project-card group"
+            data-tilt
+          >
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <span
+                    class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider"
+                    >Live</span
+                  >
+                  <span class="text-slate-400 text-sm">EdTech · AI</span>
+                </div>
+                <h3
+                  class="font-[Space_Grotesk] text-4xl font-bold text-white mb-3"
+                >
+                  Eduvance
+                </h3>
+                <p class="text-slate-300 leading-relaxed">
+                  An educative app that
+                  <span class="font-bold text-white">simplifies learning</span>
+                  by integrating legacy methods with digital experiences —
+                  mnemonics, songs, memory games, animation creator, and a
+                  creativity space. Built to make education
+                  <span class="font-bold text-white">fun</span> and build
+                  <span class="font-bold text-white">social confidence</span>.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-5">
+                  <span class="chip">Mnemonics</span>
+                  <span class="chip">Memory Games</span>
+                  <span class="chip">Animation</span>
+                  <span class="chip">Creativity</span>
+                </div>
+                <div
+                  class="mt-6 inline-flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-4 transition-all"
+                >
+                  Visit project →
+                </div>
+              </div>
+              <div
+                class="w-full md:w-64 h-48 rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-[Space_Grotesk] font-bold text-3xl shadow-xl"
+              >
+                Eduvance
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="py-24 px-6 reveal">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="section-label justify-center">05 — Contact</div>
+        <h2 class="section-title">
+          Let's build something <span class="text-indigo-400">meaningful</span>.
+        </h2>
+        <p class="mt-4 text-slate-400 text-lg">
+          Open to internships, collaborations, and full-time roles.
+        </p>
+        <div class="mt-12 grid md:grid-cols-2 gap-4">
+          <a href="mailto:elmakobiero@gmail.com" class="contact-card" data-tilt>
+            <div class="text-xs uppercase tracking-widest text-slate-400">
+              Email
+            </div>
+            <div class="font-bold text-white text-lg mt-1">
+              elmakobiero@gmail.com
+            </div>
+          </a>
+          <a href="tel:+254790558418" class="contact-card" data-tilt>
+            <div class="text-xs uppercase tracking-widest text-slate-400">
+              Phone / WhatsApp
+            </div>
+            <div class="font-bold text-white text-lg mt-1">
+              +254 790 558 418
+            </div>
+          </a>
+          <a
+            href="https://github.com/Emmanuel-Makori-Obiero"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+            data-tilt
+          >
+            <div class="text-xs uppercase tracking-widest text-slate-400">
+              GitHub
+            </div>
+            <div class="font-bold text-white text-lg mt-1">
+              @Emmanuel-Makori-Obiero
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/em.makori"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+            data-tilt
+          >
+            <div class="text-xs uppercase tracking-widest text-slate-400">
+              Instagram
+            </div>
+            <div class="font-bold text-white text-lg mt-1">@em.makori</div>
+          </a>
+        </div>
+        <form
+          id="contact-form"
+          class="mt-12 text-left bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur"
         >
-      </li>
-      <li>Phone number/whatsapp: 0790558418</li>
-      <li>
-        Github Account:
-        <a href="https://github.com/Emmanuel-Makori-Obiero" target="_blank"
-          >Github account</a
-        >
-      </li>
-      <li>
-        Social media handout(instagram):<a
-          href="https://www.instagram.com/em.makori"
-          target="_blank"
-          >@em.makori</a
-        >
-      </li>
-    </ul>
-
-    <h2>Contact me</h2>
-    <form action="https://formspree.io/f/xzdjjoww" method="POST">
-      <label>Full Name</label><br />
-      <input type="text" name="Full Name" /><br /><br />
-      <label>Email Address</label><br />
-      <input type="email" name="Email Address" /><br />
-      <label>Message</label><br />
-      <textarea name="message"></textarea><br />
-      <button type="submit">send</button>
-    </form>
-    <h1>Explanation on the internet</h1>
-    <iframe
-      width="device-width"
-      height="425"
-      src="https://www.youtube.com/embed/IlCShkbBUXs"
-      title="How to build your dream life with AI? | Ngozi Elobuike | TEDxTUDublin"
-      frameborder="0"
-      allow="
-        accelerometer;
-        autoplay;
-        clipboard-write;
-        encrypted-media;
-        gyroscope;
-        picture-in-picture;
-        web-share;
-      "
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-    <footer>
-      <p>&copy; 2026 Emmanuel Makori Obiero .All Rights reserved</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+              required
+              name="name"
+              placeholder="Full name"
+              class="form-input"
+            />
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="Email address"
+              class="form-input"
+            />
+          </div>
+          <textarea
+            required
+            name="message"
+            rows="4"
+            placeholder="Your message"
+            class="form-input mt-4"
+          ></textarea>
+          <button
+            type="submit"
+            class="mt-4 w-full px-6 py-3 rounded-full bg-white text-black font-bold hover:scale-[1.02] transition-transform"
+          >
+            Send message
+          </button>
+          <div id="form-status" class="mt-3 text-sm text-emerald-400 hidden">
+            Thanks — opening your email client…
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer
+      class="py-10 px-6 border-t border-white/5 text-center text-slate-500 text-sm"
+    >
+      © <span id="year"></span> Emmanuel Makori Obiero. Crafted with intent.
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
