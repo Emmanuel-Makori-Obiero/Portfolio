@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmanuel Makori Obiero // Portfolio</title>
-    <link rel="stylesheet" href="output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-[#f4f1ea] pt-16">
     <nav
@@ -169,55 +169,71 @@
             </h1>
           </div>
           <div
-            class="bg-[#f4f1ea] text-[#1c1b18] px-6 py-3 border border-white font-sans font-black text-xl md:text-2xl uppercase tracking-wider rounded-sm shadow-inner whitespace-nowrap"
+            class="w-full md:w-auto bg-[#f4f1ea] text-[#1c1b18] px-4 py-3 md:px-6 border border-white font-sans font-black text-sm sm:text-base md:text-xl lg:text-2xl uppercase tracking-wider rounded-sm shadow-inner text-center md:text-left whitespace-normal sm:whitespace-nowrap"
           >
             ⚡ FULL-STACK SOFTWARE ENGINEER
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div
-            class="lg:col-span-2 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
+            class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
           >
-            <h3
-              class="text-2xl md:text-4xl font-bold tracking-tight leading-none mb-6"
-            >
-              <span
-                class="inline-block border-b-2 border-[#1c1b18] pb-1 overflow-hidden whitespace-nowrap border-r-2 pr-1 w-0 [animation:typewriter_3s_steps(35,end)_1s_forwards,blink_0.75s_step-end_infinite] [@keyframes_typewriter_{from{width:0}to{width:100%}}] [@keyframes_blink_{from,to{border-color:transparent}50%{border-color:#1c1b18}}] sm:block hidden"
+            <div class="md:col-span-2">
+              <h3
+                class="text-2xl md:text-4xl font-bold tracking-tight leading-none mb-4 border-b-2 border-[#1c1b18] pb-2"
               >
                 Architecting Scalable Digital Solutions
-              </span>
-              <span class="block sm:hidden border-b-2 border-[#1c1b18] pb-1"
-                >Architecting Scalable Digital Solutions</span
+              </h3>
+            </div>
+
+            <div>
+              <p
+                class="text-base leading-relaxed text-justify font-sans text-[#2e2d29]"
               >
-            </h3>
-            <p
-              class="text-lg leading-relaxed text-justify mb-4 font-sans text-[#2e2d29]"
-            >
-              <span
-                class="float-left text-6xl font-serif font-black text-[#f4f1ea] bg-[#1c1b18] mr-3 mt-1 px-3 py-1 rounded-sm leading-none"
-                >B</span
+                <span
+                  class="float-left text-6xl font-serif font-black text-[#f4f1ea] bg-[#1c1b18] mr-3 mt-1 px-3 py-1 rounded-sm leading-none"
+                  >B</span
+                >
+                uilding scalable, AI-collaborative MERN stack applications
+                requires more than just clean syntax; it demands a comprehensive
+                understanding of end-to-end system architecture. By seamlessly
+                bridging frontend user interfaces with robust backend
+                infrastructure, complex datasets are transformed into intuitive
+                digital ecosystems built for performance.
+              </p>
+            </div>
+
+            <div class="flex flex-col justify-between h-full">
+              <p
+                class="text-base leading-relaxed text-justify font-sans text-[#2e2d29] mb-4"
               >
-              uilding scalable, AI-collaborative MERN stack applications
-              requires more than just clean syntax; it demands a comprehensive
-              understanding of end-to-end system architecture. By seamlessly
-              bridging frontend user interfaces with robust backend
-              infrastructure, complex datasets are transformed into intuitive
-              digital ecosystems built for performance.
-            </p>
-            <p
-              class="text-base leading-relaxed text-justify font-sans text-[#2e2d29]"
-            >
-              With a strong foundation rooted deeply in data analysis and IT
-              infrastructure, every codebase is engineered with scalability and
-              security at its core. From optimizing database queries to
-              deploying cloud-ready environments, the goal remains absolute:
-              designing high-impact technology systems tailored to solve
-              real-world operational challenges.
-            </p>
+                With a strong foundation rooted deeply in data analysis and IT
+                infrastructure, every codebase is engineered with scalability
+                and security at its core. From optimizing database queries to
+                deploying cloud-ready environments, the goal remains absolute:
+                designing technology systems tailored to solve real-world
+                operational challenges.
+              </p>
+
+              <div
+                class="border border-[#1c1b18] p-2 bg-[#ede9df] self-center md:self-end w-full max-w-[240px]"
+              >
+                <img
+                  src="My image.jpeg"
+                  alt="Emmanuel Makori Obiero"
+                  class="w-full h-auto filter grayscale contrast-125 border border-[#1c1b18] object-cover aspect-[4/5]"
+                />
+                <p
+                  class="font-serif italic text-[11px] text-[#54524b] mt-1.5 text-center border-t border-[#1c1b18] border-dotted pt-1"
+                >
+                  Emmanuel Makori Obiero, Software Engineer.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="space-y-6">
+          <div class="lg:col-span-4 space-y-6">
             <div
               class="border-2 border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
             >
@@ -870,18 +886,18 @@
                 <h4
                   class="font-sans font-black text-sm uppercase tracking-wide text-white"
                 >
-                  GITHUB PROFILE
+                  View Github Profile
                 </h4>
               </div>
               <p class="font-sans text-xs text-slate-400 mb-4">
-                Review active Public repositories
+                Review active repositories and Public Projects.
               </p>
               <a
                 href="https://github.com/Emmanuel-Makori-Obiero"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-block w-full text-center bg-[#f4f1ea] text-[#1c1b18] font-sans font-black text-xs uppercase tracking-wider py-2.5 hover:bg-white transition-colors duration-200 rounded-sm"
-                >View GitHub Profile ↗</a
+                >View Github Profile ↗</a
               >
             </div>
 
@@ -903,18 +919,18 @@
                 <h4
                   class="font-sans font-black text-sm uppercase tracking-wide text-white"
                 >
-                  Instagram page
+                  Social Media Profile
                 </h4>
               </div>
               <p class="font-sans text-xs text-slate-400 mb-4">
-                View Social Medial page
+                View Social Media profile.
               </p>
               <a
                 href="https://www.instagram.com/em.makori/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-block w-full text-center border border-slate-700 font-sans font-black text-xs uppercase tracking-wider py-2.5 hover:bg-[#32302a] hover:text-white hover:border-slate-500 transition-colors duration-200 rounded-sm"
-                >View Social Profile ↗</a
+                >View Social Media Profile ↗</a
               >
             </div>
           </div>
