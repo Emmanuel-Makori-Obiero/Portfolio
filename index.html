@@ -1,472 +1,934 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emmanuel Makori Obiero — Software Developer Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio of Emmanuel Makori Obiero — software developer building ethical, AI-driven solutions."
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <title>Emmanuel Makori Obiero // Portfolio</title>
+    <link rel="stylesheet" href="output.css" />
   </head>
-  <body
-    class="bg-[#0a0a0f] text-slate-100 font-[Inter] antialiased overflow-x-hidden"
-  >
-    <!-- Animated background -->
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-      <div
-        class="absolute -top-32 -left-32 w-[40rem] h-[40rem] rounded-full bg-indigo-600/20 blur-3xl animate-blob"
-      ></div>
-      <div
-        class="absolute top-1/2 -right-32 w-[40rem] h-[40rem] rounded-full bg-fuchsia-600/20 blur-3xl animate-blob animation-delay-2000"
-      ></div>
-      <div
-        class="absolute bottom-0 left-1/3 w-[35rem] h-[35rem] rounded-full bg-cyan-500/20 blur-3xl animate-blob animation-delay-4000"
-      ></div>
-      <div
-        class="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.15),transparent_50%)]"
-      ></div>
-    </div>
-    <!-- Nav -->
+  <body class="bg-[#f4f1ea] pt-16">
     <nav
-      class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-[#0a0a0f]/60 border-b border-white/5"
+      class="fixed top-0 left-0 w-full bg-[#f4f1ea] text-[#1c1b18] border-b-4 border-[#1c1b18] z-50 backdrop-blur-md bg-opacity-95 font-serif select-none"
     >
-      <div
-        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
-      >
-        <a
-          href="#top"
-          class="font-[Space_Grotesk] font-bold text-lg tracking-tight"
-        >
-          <span class="text-white">EMO</span
-          ><span class="text-indigo-400">.</span>
-        </a>
-        <div
-          class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300"
-        >
-          <a href="#about" class="nav-link">About</a>
-          <a href="#education" class="nav-link">Education</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#contact" class="nav-link">Contact</a>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="shrink-0">
+            <a
+              href="#"
+              class="text-xl font-black tracking-tight uppercase border-b-2 border-[#1c1b18] hover:bg-[#1c1b18] hover:text-[#f4f1ea] transition-all duration-200 px-1"
+            >
+              E. M. OBIERO
+            </a>
+          </div>
+
+          <div class="hidden md:block">
+            <div
+              class="ml-10 flex items-center space-x-6 font-sans text-xs font-black uppercase tracking-wider"
+            >
+              <a
+                href="#about"
+                class="text-[#1c1b18] hover:line-through transition-all duration-200"
+                >About Me</a
+              >
+              <a
+                href="#education"
+                class="text-[#1c1b18] hover:line-through transition-all duration-200"
+                >Education</a
+              >
+              <a
+                href="#goals"
+                class="text-[#1c1b18] hover:line-through transition-all duration-200"
+                >Career Goals</a
+              >
+              <a
+                href="#contact"
+                class="px-4 py-2 border-2 border-[#1c1b18] bg-[#1c1b18] text-[#f4f1ea] hover:bg-transparent hover:text-[#1c1b18] transition-all duration-200 shadow-[2px_2px_0px_0px_rgba(28,27,24,1)]"
+              >
+                Contact Desk
+              </a>
+            </div>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              onclick="
+                document
+                  .getElementById('mobile-menu')
+                  .classList.toggle('hidden')
+              "
+              type="button"
+              class="inline-flex items-center justify-center p-2 border-2 border-[#1c1b18] text-[#1c1b18] hover:bg-[#1c1b18] hover:text-[#f4f1ea] focus:outline-none transition-colors duration-200"
+            >
+              <span class="sr-only">Toggle Dispatch Menu</span>
+              <svg
+                class="h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <a
-          href="#contact"
-          class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black text-sm font-semibold hover:scale-105 transition-transform"
+      </div>
+
+      <div
+        class="hidden bg-[#ede9df] border-t-2 border-[#1c1b18]"
+        id="mobile-menu"
+      >
+        <div
+          class="px-4 pt-3 pb-5 space-y-2 font-sans text-sm font-bold uppercase tracking-wider"
         >
-          Hire me →
-        </a>
+          <a
+            href="#about"
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            class="block py-2 text-[#1c1b18] border-b border-[#1c1b18] border-dashed"
+            >About Me</a
+          >
+          <a
+            href="#education"
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            class="block py-2 text-[#1c1b18] border-b border-[#1c1b18] border-dashed"
+            >Education & Skills</a
+          >
+          <a
+            href="#goals"
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            class="block py-2 text-[#1c1b18] border-b border-[#1c1b18] border-dashed"
+            >Career Goals</a
+          >
+          <a
+            href="#contact"
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            class="block mt-4 px-4 py-2.5 border-2 border-[#1c1b18] bg-[#1c1b18] text-[#f4f1ea] text-center"
+          >
+            Contact Desk ↗
+          </a>
+        </div>
       </div>
     </nav>
-    <!-- Hero -->
+
     <section
-      id="top"
-      class="relative min-h-screen flex items-center px-6 pt-24"
+      id="about"
+      class="min-h-screen bg-[#f4f1ea] text-[#1c1b18] font-serif py-20 px-4 sm:px-6 lg:px-8 border-b-4 border-[#1c1b18] relative overflow-hidden select-none"
     >
       <div
-        class="max-w-6xl mx-auto w-full grid md:grid-cols-5 gap-12 items-center"
-      >
-        <div class="md:col-span-3 space-y-6">
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium"
-          >
-            <span
-              class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
-            ></span>
-            Available for opportunities
-          </div>
-          <h1
-            class="font-[Space_Grotesk] font-bold text-5xl md:text-7xl leading-[0.95] tracking-tight"
-          >
-            Emmanuel<br />
-            Makori
-            <span
-              class="bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent"
-              >Obiero</span
-            >
-          </h1>
-          <p class="text-xl md:text-2xl font-semibold text-slate-200">
-            Software Developer · AI Builder · Future Founder
-          </p>
-          <p
-            class="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed"
-          >
-            Building ethical, AI-driven products that fuse
-            <span class="text-white font-semibold">VR</span>,
-            <span class="text-white font-semibold">biometrics</span>, and
-            <span class="text-white font-semibold">human intuition</span> to
-            solve real-world problems.
-          </p>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a
-              href="#projects"
-              class="px-6 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform shadow-lg shadow-white/10"
-              >View Projects</a
-            >
-            <a
-              href="#contact"
-              class="px-6 py-3 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition"
-              >Get in touch</a
-            >
-          </div>
-          <!-- Recruiter quick-stats -->
-          <div class="grid grid-cols-3 gap-4 pt-8 max-w-md">
-            <div class="stat-card">
-              <div class="text-2xl font-bold text-white">5+</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider">
-                Certifications
-              </div>
-            </div>
-            <div class="stat-card">
-              <div class="text-2xl font-bold text-white">8+</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider">
-                Core Skills
-              </div>
-            </div>
-            <div class="stat-card">
-              <div class="text-2xl font-bold text-white">1</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider">
-                Live Project
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 3D Card -->
-        <div class="md:col-span-2 flex justify-center">
-          <div class="tilt-card group" data-tilt>
-            <div
-              class="tilt-inner relative w-72 h-96 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-cyan-500"
-              ></div>
-              <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.4),transparent_60%)]"
-              ></div>
-              <div
-                class="absolute inset-0 flex flex-col justify-between p-7 text-white"
-              >
-                <div>
-                  <div class="text-xs uppercase tracking-[0.3em] opacity-80">
-                    Portfolio
-                  </div>
-                  <div
-                    class="mt-2 font-[Space_Grotesk] text-3xl font-bold leading-tight"
-                  >
-                    Emmanuel<br />Makori
-                  </div>
-                </div>
-                <div>
-                  <div class="text-xs uppercase tracking-widest opacity-70">
-                    Role
-                  </div>
-                  <div class="font-bold text-lg">Software Developer</div>
-                  <div
-                    class="mt-3 text-xs uppercase tracking-widest opacity-70"
-                  >
-                    Focus
-                  </div>
-                  <div class="font-semibold">AI · VR · Biometrics</div>
-                </div>
-              </div>
-              <div class="tilt-shine"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About -->
-    <section id="about" class="py-24 px-6 reveal">
+        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1b18_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
       <div class="max-w-6xl mx-auto">
-        <div class="section-label">01 — About</div>
-        <h2 class="section-title">
-          Software developer with a
-          <span class="text-indigo-400">mission</span>.
-        </h2>
-        <div class="mt-10 grid md:grid-cols-2 gap-10">
-          <p class="text-lg text-slate-300 leading-relaxed">
-            I build
-            <span class="font-bold text-white"
-              >ethical, AI-driven solutions</span
-            >
-            that augment human capabilities. My goal: launch a startup
-            integrating
-            <span class="font-bold text-white">Virtual Reality</span> and
-            <span class="font-bold text-white">biometric analysis</span> to
-            solve complex real-world problems.
-          </p>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="info-card">
-              <div class="info-key">Location</div>
-              <div class="info-val">Nairobi, Kenya</div>
-            </div>
-            <div class="info-card">
-              <div class="info-key">Focus</div>
-              <div class="info-val">AI · VR · Hardware</div>
-            </div>
-            <div class="info-card">
-              <div class="info-key">Status</div>
-              <div class="info-val">Open to roles</div>
-            </div>
-            <div class="info-card">
-              <div class="info-key">Stack</div>
-              <div class="info-val">Full-stack + AI</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Education -->
-    <section id="education" class="py-24 px-6 reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="section-label">02 — Education</div>
-        <h2 class="section-title">Credentials & training.</h2>
-        <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div class="edu-card" data-tilt>
-            <div class="edu-year">2026</div>
-            <div class="edu-title">Software Development Bootcamp</div>
-            <div class="edu-org">GOMYCODE</div>
-            <div class="edu-tag">In progress</div>
-          </div>
-          <div class="edu-card" data-tilt>
-            <div class="edu-year">2026</div>
-            <div class="edu-title">ICDL 1 & 2</div>
-            <div class="edu-org">Kenyatta University</div>
-            <div class="edu-tag">Digital Literacy</div>
-          </div>
-          <div class="edu-card" data-tilt>
-            <div class="edu-year">2026</div>
-            <div class="edu-title">ITE — Information Technology Essentials</div>
-            <div class="edu-org">AFRALTI</div>
-            <div class="edu-tag">Hardware</div>
-          </div>
-          <div class="edu-card" data-tilt>
-            <div class="edu-year">2025</div>
-            <div class="edu-title">KCSE Certificate</div>
-            <div class="edu-org">Moi Forces Nairobi</div>
-            <div class="edu-tag">Secondary</div>
-          </div>
-          <div class="edu-card" data-tilt>
-            <div class="edu-year">2020</div>
-            <div class="edu-title">KCPE Certificate</div>
-            <div class="edu-org">Nairobi Primary School</div>
-            <div class="edu-tag">Primary</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Skills -->
-    <section id="skills" class="py-24 px-6 reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="section-label">03 — Skills</div>
-        <h2 class="section-title">What I bring to the table.</h2>
-        <div class="mt-12 grid md:grid-cols-3 gap-5">
-          <div class="skill-card" data-tilt>
-            <div class="skill-icon">⚡</div>
-            <div class="skill-title">Software Development</div>
-            <div class="skill-desc">
-              Building full-stack apps with modern tooling.
-            </div>
-          </div>
-          <div class="skill-card" data-tilt>
-            <div class="skill-icon">🛡️</div>
-            <div class="skill-title">Digital Security Consulting</div>
-            <div class="skill-desc">
-              Advising on security posture and best practices.
-            </div>
-          </div>
-          <div class="skill-card" data-tilt>
-            <div class="skill-icon">🧩</div>
-            <div class="skill-title">Product Strategy</div>
-            <div class="skill-desc">
-              Translating ideas into shippable roadmaps.
-            </div>
-          </div>
-          <div class="skill-card" data-tilt>
-            <div class="skill-icon">🔧</div>
-            <div class="skill-title">Computer Hardware Repair</div>
-            <div class="skill-desc">
-              Hands-on diagnostics and component replacement.
-            </div>
-          </div>
-          <div class="skill-card" data-tilt>
-            <div class="skill-icon">📊</div>
-            <div class="skill-title">Microsoft Suite</div>
-            <div class="skill-desc">Word · Excel · Power BI for analytics.</div>
-          </div>
-          <div class="skill-card" data-tilt>
-            <div class="skill-icon">♟️</div>
-            <div class="skill-title">Strategic Thinking</div>
-            <div class="skill-desc">
-              Competitive chess sharpens problem-solving.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects -->
-    <section id="projects" class="py-24 px-6 reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="section-label">04 — Projects</div>
-        <h2 class="section-title">Selected work.</h2>
-        <div class="mt-12">
-          <a
-            href="https://eduvancereal.base44.app/"
-            target="_blank"
-            rel="noopener"
-            class="project-card group"
-            data-tilt
-          >
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-              <div class="flex-1">
-                <div class="flex items-center gap-3 mb-3">
-                  <span
-                    class="px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-bold uppercase tracking-wider"
-                    >Live</span
-                  >
-                  <span class="text-slate-400 text-sm">EdTech · AI</span>
-                </div>
-                <h3
-                  class="font-[Space_Grotesk] text-4xl font-bold text-white mb-3"
-                >
-                  Eduvance
-                </h3>
-                <p class="text-slate-300 leading-relaxed">
-                  An educative app that
-                  <span class="font-bold text-white">simplifies learning</span>
-                  by integrating legacy methods with digital experiences —
-                  mnemonics, songs, memory games, animation creator, and a
-                  creativity space. Built to make education
-                  <span class="font-bold text-white">fun</span> and build
-                  <span class="font-bold text-white">social confidence</span>.
-                </p>
-                <div class="flex flex-wrap gap-2 mt-5">
-                  <span class="chip">Mnemonics</span>
-                  <span class="chip">Memory Games</span>
-                  <span class="chip">Animation</span>
-                  <span class="chip">Creativity</span>
-                </div>
-                <div
-                  class="mt-6 inline-flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-4 transition-all"
-                >
-                  Visit project →
-                </div>
-              </div>
-              <div
-                class="w-full md:w-64 h-48 rounded-2xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-[Space_Grotesk] font-bold text-3xl shadow-xl"
-              >
-                Eduvance
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="py-24 px-6 reveal">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="section-label justify-center">05 — Contact</div>
-        <h2 class="section-title">
-          Let's build something <span class="text-indigo-400">meaningful</span>.
-        </h2>
-        <p class="mt-4 text-slate-400 text-lg">
-          Open to internships, collaborations, and full-time roles.
-        </p>
-        <div class="mt-12 grid md:grid-cols-2 gap-4">
-          <a href="mailto:elmakobiero@gmail.com" class="contact-card" data-tilt>
-            <div class="text-xs uppercase tracking-widest text-slate-400">
-              Email
-            </div>
-            <div class="font-bold text-white text-lg mt-1">
-              elmakobiero@gmail.com
-            </div>
-          </a>
-          <a href="tel:+254790558418" class="contact-card" data-tilt>
-            <div class="text-xs uppercase tracking-widest text-slate-400">
-              Phone / WhatsApp
-            </div>
-            <div class="font-bold text-white text-lg mt-1">
-              +254 790 558 418
-            </div>
-          </a>
-          <a
-            href="https://github.com/Emmanuel-Makori-Obiero"
-            target="_blank"
-            rel="noopener"
-            class="contact-card"
-            data-tilt
-          >
-            <div class="text-xs uppercase tracking-widest text-slate-400">
-              GitHub
-            </div>
-            <div class="font-bold text-white text-lg mt-1">
-              @Emmanuel-Makori-Obiero
-            </div>
-          </a>
-          <a
-            href="https://www.instagram.com/em.makori"
-            target="_blank"
-            rel="noopener"
-            class="contact-card"
-            data-tilt
-          >
-            <div class="text-xs uppercase tracking-widest text-slate-400">
-              Instagram
-            </div>
-            <div class="font-bold text-white text-lg mt-1">@em.makori</div>
-          </a>
-        </div>
-        <form
-          id="contact-form"
-          class="mt-12 text-left bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur"
+        <div
+          class="text-center border-b-[6px] border-double border-[#1c1b18] pb-4 mb-8"
         >
-          <div class="grid md:grid-cols-2 gap-4">
-            <input
-              required
-              name="name"
-              placeholder="Full name"
-              class="form-input"
-            />
-            <input
-              required
-              type="email"
-              name="email"
-              placeholder="Email address"
-              class="form-input"
-            />
-          </div>
-          <textarea
-            required
-            name="message"
-            rows="4"
-            placeholder="Your message"
-            class="form-input mt-4"
-          ></textarea>
-          <button
-            type="submit"
-            class="mt-4 w-full px-6 py-3 rounded-full bg-white text-black font-bold hover:scale-[1.02] transition-transform"
+          <p
+            class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-2"
           >
-            Send message
-          </button>
-          <div id="form-status" class="mt-3 text-sm text-emerald-400 hidden">
-            Thanks — opening your email client…
+            Portfolio Special Edition // Developer Profile
+          </p>
+          <h2
+            class="text-5xl md:text-7xl font-black tracking-tighter uppercase font-serif my-2 opacity-0 [animation:inkBleed_1.8s_cubic-bezier(0.19,1,0.22,1)_forwards] [@keyframes_inkBleed_{0%{filter:blur(4px)_contrast(3);opacity:0;transform:scale(0.98);}50%{filter:blur(1px)_contrast(1.5);opacity:0.8;}100%{filter:blur(0px)_contrast(1);opacity:1;transform:scale(1);}}]"
+          >
+            The Full-Stack Gazette
+          </h2>
+          <div
+            class="flex justify-between items-center font-sans uppercase text-xs font-semibold border-t border-[#1c1b18] pt-2 mt-4 px-2"
+          >
+            <span>Vol. CIV No. 42</span>
+            <span class="hidden sm:inline">Nairobi, Kenya</span>
+            <span class="font-bold">Price: Hard Work & Coffee</span>
           </div>
-        </form>
+        </div>
+
+        <div
+          class="border-4 border-[#1c1b18] p-5 mb-8 bg-[#1c1b18] text-[#f4f1ea] flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-[6px_6px_0px_0px_rgba(28,27,24,0.15)]"
+        >
+          <div>
+            <p
+              class="font-sans text-xs uppercase tracking-widest text-slate-400 font-bold mb-1"
+            >
+              Featured Engineer Profile
+            </p>
+            <h1
+              class="font-serif text-3xl md:text-4xl font-black tracking-tight text-white"
+            >
+              Emmanuel Makori Obiero
+            </h1>
+          </div>
+          <div
+            class="bg-[#f4f1ea] text-[#1c1b18] px-6 py-3 border border-white font-sans font-black text-xl md:text-2xl uppercase tracking-wider rounded-sm shadow-inner whitespace-nowrap"
+          >
+            ⚡ FULL-STACK SOFTWARE ENGINEER
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div
+            class="lg:col-span-2 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
+          >
+            <h3
+              class="text-2xl md:text-4xl font-bold tracking-tight leading-none mb-6"
+            >
+              <span
+                class="inline-block border-b-2 border-[#1c1b18] pb-1 overflow-hidden whitespace-nowrap border-r-2 pr-1 w-0 [animation:typewriter_3s_steps(35,end)_1s_forwards,blink_0.75s_step-end_infinite] [@keyframes_typewriter_{from{width:0}to{width:100%}}] [@keyframes_blink_{from,to{border-color:transparent}50%{border-color:#1c1b18}}] sm:block hidden"
+              >
+                Architecting Scalable Digital Solutions
+              </span>
+              <span class="block sm:hidden border-b-2 border-[#1c1b18] pb-1"
+                >Architecting Scalable Digital Solutions</span
+              >
+            </h3>
+            <p
+              class="text-lg leading-relaxed text-justify mb-4 font-sans text-[#2e2d29]"
+            >
+              <span
+                class="float-left text-6xl font-serif font-black text-[#f4f1ea] bg-[#1c1b18] mr-3 mt-1 px-3 py-1 rounded-sm leading-none"
+                >B</span
+              >
+              uilding scalable, AI-collaborative MERN stack applications
+              requires more than just clean syntax; it demands a comprehensive
+              understanding of end-to-end system architecture. By seamlessly
+              bridging frontend user interfaces with robust backend
+              infrastructure, complex datasets are transformed into intuitive
+              digital ecosystems built for performance.
+            </p>
+            <p
+              class="text-base leading-relaxed text-justify font-sans text-[#2e2d29]"
+            >
+              With a strong foundation rooted deeply in data analysis and IT
+              infrastructure, every codebase is engineered with scalability and
+              security at its core. From optimizing database queries to
+              deploying cloud-ready environments, the goal remains absolute:
+              designing high-impact technology systems tailored to solve
+              real-world operational challenges.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div
+              class="border-2 border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
+            >
+              <h4
+                class="font-serif font-bold uppercase tracking-wider text-sm border-b border-[#1c1b18] pb-2 mb-3"
+              >
+                System Editorial Overview
+              </h4>
+              <ul class="font-sans text-sm space-y-3 text-[#2e2d29]">
+                <li
+                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
+                >
+                  <span class="font-bold">Core Competency:</span
+                  ><span>Full-Stack Engineering</span>
+                </li>
+                <li
+                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
+                >
+                  <span class="font-bold">Engine Environment:</span
+                  ><span>Node.js, React, Express</span>
+                </li>
+                <li
+                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
+                >
+                  <span class="font-bold">Data Strategy:</span
+                  ><span>MongoDB & Power BI Analysis</span>
+                </li>
+                <li
+                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
+                >
+                  <span class="font-bold">Infrastructure:</span
+                  ><span>IT Essentials & Networks</span>
+                </li>
+              </ul>
+              <div
+                class="mt-4 border-t border-[#1c1b18] pt-3 text-center italic font-serif text-xs text-[#54524b]"
+              >
+                "The best way to predict the future is to architect it."
+              </div>
+            </div>
+            <div
+              class="border-4 border-double border-[#1c1b18] p-6 text-center bg-transparent"
+            >
+              <p
+                class="font-serif text-xs uppercase tracking-widest text-[#54524b] mb-1"
+              >
+                - Advertisement -
+              </p>
+              <p class="font-serif font-black text-xl tracking-tight uppercase">
+                AI-COLLABORATIVE DESIGN
+              </p>
+              <p class="font-sans text-xs mt-1 text-[#2e2d29]">
+                Now accepting engineering briefs and architecture consultations.
+              </p>
+              <a
+                href="#contact"
+                class="inline-block mt-4 px-4 py-2 bg-[#1c1b18] text-[#f4f1ea] font-sans font-bold text-xs uppercase tracking-wider hover:bg-[#383631] transition-colors duration-200"
+                >Inquire Within</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <footer
-      class="py-10 px-6 border-t border-white/5 text-center text-slate-500 text-sm"
+
+    <section
+      id="education"
+      class="min-h-screen bg-[#f4f1ea] text-[#1c1b18] font-serif py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-[#1c1b18] relative overflow-hidden select-none"
     >
-      © <span id="year"></span> Emmanuel Makori Obiero. Crafted with intent.
-    </footer>
-    <script src="script.js"></script>
+      <div
+        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1b18_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
+      <div class="max-w-6xl mx-auto">
+        <div class="border-b-[6px] border-double border-[#1c1b18] pb-3 mb-12">
+          <p
+            class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-1 text-slate-600"
+          >
+            Dossier Section II // Technical Training
+          </p>
+          <h2 class="text-4xl font-black uppercase tracking-tight font-serif">
+            Qualifications & Skill Matrix
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div
+            class="lg:col-span-7 space-y-8 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
+          >
+            <h3
+              class="font-sans font-black uppercase tracking-wider text-sm text-[#1c1b18] mb-6 border-b-2 border-[#1c1b18] pb-1 inline-block"
+            >
+              Academic & Technical Timeline
+            </h3>
+            <div
+              class="relative border-l-2 border-[#1c1b18] pl-6 ml-2 space-y-8"
+            >
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
+                ></div>
+                <div class="flex justify-between items-start font-sans">
+                  <div>
+                    <span
+                      class="bg-[#1c1b18] text-[#f4f1ea] text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm"
+                      >Current</span
+                    >
+                    <h4
+                      class="font-serif text-xl font-bold mt-1 text-[#1c1b18]"
+                    >
+                      Full-Stack Software Development
+                    </h4>
+                    <p class="text-sm font-semibold text-slate-700">GOMYCODE</p>
+                  </div>
+                  <span
+                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
+                ></div>
+                <div class="flex justify-between items-start font-sans">
+                  <div>
+                    <span
+                      class="bg-blue-900 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm"
+                      >Specialization</span
+                    >
+                    <h4
+                      class="font-serif text-xl font-bold mt-1 text-[#1c1b18]"
+                    >
+                      Augmenting LLMs using RAG
+                    </h4>
+                    <p class="text-sm font-semibold text-slate-700">
+                      NVIDIA (Online Self-Taught Engine)
+                    </p>
+                  </div>
+                  <span
+                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
+                ></div>
+                <div class="flex justify-between items-start font-sans">
+                  <div>
+                    <h4 class="font-serif text-xl font-bold text-[#1c1b18]">
+                      Microsoft Elevate AI & AI Fluency
+                    </h4>
+                    <p class="text-sm font-semibold text-slate-700">
+                      ICT Authority (Online Class) & PLP Africa
+                    </p>
+                  </div>
+                  <span
+                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
+                ></div>
+                <div class="flex justify-between items-start font-sans">
+                  <div>
+                    <h4 class="font-serif text-xl font-bold text-[#1c1b18]">
+                      IT Essentials (ITE) Certification
+                    </h4>
+                    <p class="text-sm font-semibold text-slate-700">
+                      AFRALTI (African Advanced Telecommunications Institute)
+                    </p>
+                  </div>
+                  <span
+                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div class="relative">
+                <div
+                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
+                ></div>
+                <div class="flex justify-between items-start font-sans">
+                  <div>
+                    <h4 class="font-serif text-xl font-bold text-[#1c1b18]">
+                      ICDL Certification (Phases 1 & 2)
+                    </h4>
+                    <p class="text-sm font-semibold text-slate-700">
+                      Kenyatta University
+                    </p>
+                  </div>
+                  <span
+                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
+                    >2026</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-6">
+            <h3
+              class="font-sans font-black uppercase tracking-wider text-sm text-[#1c1b18] mb-2 border-b-2 border-[#1c1b18] pb-1 inline-block"
+            >
+              Technical Stack Inventory
+            </h3>
+            <div
+              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
+            >
+              <h4
+                class="font-sans font-black text-xs uppercase tracking-wider text-red-800 mb-2"
+              >
+                ● SOFTWARE APPARATUS (MERN Stack)
+              </h4>
+              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >MongoDB</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Express.js</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >React.js</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Node.js</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Frontend UI Design</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Backend Architecture</span
+                >
+              </div>
+            </div>
+            <div
+              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
+            >
+              <h4
+                class="font-sans font-black text-xs uppercase tracking-wider text-indigo-900 mb-2"
+              >
+                ● INTELLIGENCE INFRASTRUCTURE
+              </h4>
+              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Retrieval-Augmented Generation (RAG)</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >LLM Engineering</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >AI Copilot Collaboration</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Microsoft Elevate Suite</span
+                >
+              </div>
+            </div>
+            <div
+              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
+            >
+              <h4
+                class="font-sans font-black text-xs uppercase tracking-wider text-slate-800 mb-2"
+              >
+                ● DATA COMPUTATION & ANALYSIS
+              </h4>
+              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Microsoft Power BI</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Relational Databases</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Advanced Excel Engine</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Digital Consultancy</span
+                >
+              </div>
+            </div>
+            <div
+              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
+            >
+              <h4
+                class="font-sans font-black text-xs uppercase tracking-wider text-emerald-800 mb-2"
+              >
+                ● SYSTEM FOUNDATIONS
+              </h4>
+              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Network Routing & Switching</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Hardware Diagnosis & Repair</span
+                >
+                <span
+                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
+                  >Digital Literacy Infrastructure</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="goals"
+      class="min-h-screen bg-[#f4f1ea] text-[#1c1b18] font-serif py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-[#1c1b18] relative overflow-hidden select-none"
+    >
+      <div
+        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1b18_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
+      <div class="max-w-6xl mx-auto">
+        <div class="border-b-[6px] border-double border-[#1c1b18] pb-3 mb-12">
+          <p
+            class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-1 text-slate-600"
+          >
+            Dossier Section III // Future Trajectory
+          </p>
+          <h2 class="text-4xl font-black uppercase tracking-tight font-serif">
+            Strategic Career Blueprint
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div
+            class="lg:col-span-8 space-y-8 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
+          >
+            <div
+              class="bg-[#1c1b18] text-[#f4f1ea] p-6 rounded-sm shadow-[4px_4px_0px_0px_rgba(28,27,24,0.15)] mb-8"
+            >
+              <h3
+                class="font-sans font-black text-xs uppercase tracking-widest text-slate-400 mb-2"
+              >
+                ● EXECUTIVE VISION
+              </h3>
+              <p
+                class="text-xl md:text-2xl font-serif font-bold italic leading-relaxed text-white"
+              >
+                "To scale from a high-performance engineer into a technology
+                executive—leveraging deep AI fluency and full-stack architecture
+                to build market-disrupting products while fostering
+                hyper-focused engineering ecosystems."
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans">
+              <div class="border border-[#1c1b18] p-5 bg-[#ede9df]">
+                <h4
+                  class="font-black text-sm uppercase tracking-wider text-red-800 border-b border-[#1c1b18] pb-2 mb-3"
+                >
+                  01 / Core Product Architecture
+                </h4>
+                <p
+                  class="text-sm text-[#2e2d29] leading-relaxed text-justify mb-4"
+                >
+                  Committed to engineering top-tier, highly optimized MERN stack
+                  applications that bridge clean consumer logic with heavy
+                  enterprise backend systems.
+                </p>
+                <p class="text-sm text-[#2e2d29] leading-relaxed text-justify">
+                  By continuous mastery of retrieval engines (RAG) and
+                  intelligent systems, the focus remains on building native AI
+                  solutions designed to enhance operational performance and user
+                  productivity.
+                </p>
+              </div>
+              <div class="border border-[#1c1b18] p-5 bg-[#ede9df]">
+                <h4
+                  class="font-black text-sm uppercase tracking-wider text-indigo-900 border-b border-[#1c1b18] pb-2 mb-3"
+                >
+                  02 / Ecosystem & Leadership
+                </h4>
+                <p
+                  class="text-sm text-[#2e2d29] leading-relaxed text-justify mb-4"
+                >
+                  Actively collaborating with high-growth engineering teams to
+                  cross-pollinate technical insights and build an elite,
+                  hyper-focused community of tech builders.
+                </p>
+                <p class="text-sm text-[#2e2d29] leading-relaxed text-justify">
+                  The ultimate architectural target is operational leadership:
+                  steering engineering teams as a founder and CEO to deploy
+                  innovative software that answers urgent consumer demands.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 space-y-6">
+            <h3
+              class="font-sans font-black uppercase tracking-wider text-sm text-[#1c1b18] mb-2 border-b-2 border-[#1c1b18] pb-1 inline-block"
+            >
+              Strategic Objectives
+            </h3>
+            <div
+              class="border-4 border-double border-[#1c1b18] p-5 bg-transparent space-y-4"
+            >
+              <div>
+                <span
+                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-[#1c1b18] text-[#f4f1ea] px-1.5 py-0.5"
+                  >Tactical</span
+                >
+                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
+                  High-Impact Full-Stack Engineering
+                </h5>
+                <p class="font-sans text-xs text-slate-700 mt-0.5">
+                  Deploying production-ready MERN apps with robust, data-driven
+                  backends.
+                </p>
+              </div>
+              <div class="border-t border-[#1c1b18] border-dotted pt-3">
+                <span
+                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-[#1c1b18] text-[#f4f1ea] px-1.5 py-0.5"
+                  >Intelligence</span
+                >
+                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
+                  Advanced AI Implementation
+                </h5>
+                <p class="font-sans text-xs text-slate-700 mt-0.5">
+                  Building custom LLM augmentations, automated workflows, and
+                  RAG architectures.
+                </p>
+              </div>
+              <div class="border-t border-[#1c1b18] border-dotted pt-3">
+                <span
+                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-[#1c1b18] text-[#f4f1ea] px-1.5 py-0.5"
+                  >Ecosystem</span
+                >
+                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
+                  Community Integration
+                </h5>
+                <p class="font-sans text-xs text-slate-700 mt-0.5">
+                  Cultivating collaboration channels and scaling an active
+                  developer network.
+                </p>
+              </div>
+              <div class="border-t border-[#1c1b18] border-dotted pt-3">
+                <span
+                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-red-800 text-white px-1.5 py-0.5"
+                  >Apex Target</span
+                >
+                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
+                  Executive Tech Leadership (CEO)
+                </h5>
+                <p class="font-sans text-xs text-slate-700 mt-0.5">
+                  Founding and scaling technology-driven enterprises in regional
+                  growth markets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="bg-[#1c1b18] text-[#f4f1ea] font-serif py-16 px-4 sm:px-6 lg:px-8 border-t-4 border-[#1c1b18] relative overflow-hidden select-none"
+    >
+      <div
+        class="absolute inset-0 opacity-[0.02] pointer-events-none bg-[radial-gradient(#f4f1ea_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
+      <div class="max-w-6xl mx-auto">
+        <div
+          class="border-b-2 border-slate-700 pb-3 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-4"
+        >
+          <div>
+            <p
+              class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-1 text-slate-400"
+            >
+              Dossier Section IV // Communication Channels
+            </p>
+            <h2
+              class="text-4xl font-black uppercase tracking-tight font-serif text-white"
+            >
+              Establish Connection
+            </h2>
+          </div>
+          <div
+            class="font-sans text-xs uppercase bg-[#f4f1ea] text-[#1c1b18] px-3 py-1 font-bold tracking-wider rounded-sm"
+          >
+            Available for Briefing
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-7 space-y-6 font-sans">
+            <h3 class="font-serif font-bold text-2xl text-white mb-4">
+              Direct Inquiries & Project Briefs
+            </h3>
+            <p class="text-slate-300 text-sm leading-relaxed max-w-xl mb-8">
+              Whether you are an industry recruiter looking to scale your
+              engineering team, or a collaborator seeking to construct
+              cutting-edge MERN stack solutions, use the verified channels below
+              to initiate contact.
+            </p>
+
+            <div class="space-y-4 max-w-lg">
+              <a
+                href="mailto:emmanuelmakobiero@gmail.com"
+                class="group flex items-center gap-4 p-3 border border-slate-800 bg-[#262420] hover:bg-[#32302a] hover:border-slate-600 transition-all duration-200 rounded-sm"
+              >
+                <div
+                  class="p-2 bg-[#f4f1ea] text-[#1c1b18] rounded-sm group-hover:scale-105 transition-transform"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="truncate">
+                  <p
+                    class="text-[10px] uppercase font-black tracking-wider text-slate-400"
+                  >
+                    Secure Mail Server
+                  </p>
+                  <p
+                    class="text-sm font-bold text-white tracking-wide truncate"
+                  >
+                    emmanuelmakobiero@gmail.com
+                  </p>
+                </div>
+              </a>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a
+                  href="tel:0711617528"
+                  class="group flex items-center gap-4 p-3 border border-slate-800 bg-[#262420] hover:bg-[#32302a] hover:border-slate-600 transition-all duration-200 rounded-sm"
+                >
+                  <div
+                    class="p-2 bg-[#f4f1ea] text-[#1c1b18] rounded-sm group-hover:scale-105 transition-transform"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 6.622kM2.25 9.c0 8.618 7.033 15.65 15.65 15.65 1.014 0 2.008-.097 2.97-.282A2.01 2.01 0 0022.5 22.41v-3.715a2.01 2.01 0 00-1.637-1.979l-3.374-.675a2.01 2.01 0 00-1.848.738l-1.42 1.42A16.533 16.533 0 017.165 11.23l1.42-1.42a2.01 2.01 0 00.738-1.848l-.675-3.374A2.01 2.01 0 006.71 3H3a2.01 2.01 0 00-1.979 1.637A16.536 16.536 0 002.25 6.622z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="text-[10px] uppercase font-black tracking-wider text-slate-400"
+                    >
+                      Primary Voice Line
+                    </p>
+                    <p class="text-sm font-bold text-white tracking-wide">
+                      0711 617 528
+                    </p>
+                  </div>
+                </a>
+                <a
+                  href="tel:0790558418"
+                  class="group flex items-center gap-4 p-3 border border-slate-800 bg-[#262420] hover:bg-[#32302a] hover:border-slate-600 transition-all duration-200 rounded-sm"
+                >
+                  <div
+                    class="p-2 bg-[#f4f1ea] text-[#1c1b18] rounded-sm group-hover:scale-105 transition-transform"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 6.622kM2.25 9.c0 8.618 7.033 15.65 15.65 15.65 1.014 0 2.008-.097 2.97-.282A2.01 2.01 0 0022.5 22.41v-3.715a2.01 2.01 0 00-1.637-1.979l-3.374-.675a2.01 2.01 0 00-1.848.738l-1.42 1.42A16.533 16.533 0 017.165 11.23l1.42-1.42a2.01 2.01 0 00.738-1.848l-.675-3.374A2.01 2.01 0 006.71 3H3a2.01 2.01 0 00-1.979 1.637A16.536 16.536 0 002.25 6.622z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="text-[10px] uppercase font-black tracking-wider text-slate-400"
+                    >
+                      Secondary Voice Line
+                    </p>
+                    <p class="text-sm font-bold text-white tracking-wide">
+                      0790 558 418
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-6">
+            <h3
+              class="font-sans font-black uppercase tracking-wider text-sm text-slate-400 border-b-2 border-slate-700 pb-1 inline-block"
+            >
+              External Indexes
+            </h3>
+            <div
+              class="border border-slate-800 p-5 bg-[#262420] rounded-sm shadow-md"
+            >
+              <div class="flex items-center gap-3 mb-3">
+                <svg
+                  class="w-6 h-6 text-[#f4f1ea]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.008.069-.008 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <h4
+                  class="font-sans font-black text-sm uppercase tracking-wide text-white"
+                >
+                  Source Code Deployment
+                </h4>
+              </div>
+              <p class="font-sans text-xs text-slate-400 mb-4">
+                Review active repositories, MERN architecture layouts, and
+                version history files.
+              </p>
+              <a
+                href="https://github.com/Emmanuel-Makori-Obiero"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block w-full text-center bg-[#f4f1ea] text-[#1c1b18] font-sans font-black text-xs uppercase tracking-wider py-2.5 hover:bg-white transition-colors duration-200 rounded-sm"
+                >Inspect GitHub Engine ↗</a
+              >
+            </div>
+
+            <div
+              class="border border-slate-800 p-5 bg-[#262420] rounded-sm shadow-md"
+            >
+              <div class="flex items-center gap-3 mb-3">
+                <svg
+                  class="w-6 h-6 text-[#f4f1ea]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <h4
+                  class="font-sans font-black text-sm uppercase tracking-wide text-white"
+                >
+                  Content Architecture
+                </h4>
+              </div>
+              <p class="font-sans text-xs text-slate-400 mb-4">
+                View advertising media templates, self-taught video structures,
+                and design concepts.
+              </p>
+              <a
+                href="https://www.instagram.com/em.makori/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block w-full text-center border border-slate-700 font-sans font-black text-xs uppercase tracking-wider py-2.5 hover:bg-[#32302a] hover:text-white hover:border-slate-500 transition-colors duration-200 rounded-sm"
+                >View Design Ledger ↗</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-800 mt-16 pt-6 flex flex-col sm:flex-row justify-between items-center text-[10px] font-sans text-slate-500 uppercase tracking-widest"
+        >
+          <p>© 2026 Emmanuel Makori Obiero. All Rights Reserved.</p>
+          <p>Built with Pure HTML & Tailwind CSS Engine</p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
