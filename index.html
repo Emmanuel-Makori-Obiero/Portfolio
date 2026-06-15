@@ -5,46 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmanuel Makori Obiero // Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-[#f4f1ea] pt-16">
+  <body class="bg-slate-50 text-slate-900 pt-20 antialiased">
+    <!-- Header Navigation -->
     <nav
-      class="fixed top-0 left-0 w-full bg-[#f4f1ea] text-[#1c1b18] border-b-4 border-[#1c1b18] z-50 backdrop-blur-md bg-opacity-95 font-serif select-none"
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-200/80 z-50 transition-all"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="shrink-0">
             <a
               href="#"
-              class="text-xl font-black tracking-tight uppercase border-b-2 border-[#1c1b18] hover:bg-[#1c1b18] hover:text-[#f4f1ea] transition-all duration-200 px-1"
+              class="text-sm font-bold tracking-wider text-slate-900 hover:text-indigo-600 transition-colors"
             >
-              E. M. OBIERO
+              EMMANUEL OBIERO
             </a>
           </div>
 
           <div class="hidden md:block">
             <div
-              class="ml-10 flex items-center space-x-6 font-sans text-xs font-black uppercase tracking-wider"
+              class="ml-10 flex items-center space-x-8 text-sm font-medium text-slate-600"
             >
-              <a
-                href="#about"
-                class="text-[#1c1b18] hover:line-through transition-all duration-200"
-                >About Me</a
+              <a href="#about" class="hover:text-slate-900 transition-colors"
+                >About</a
               >
               <a
                 href="#education"
-                class="text-[#1c1b18] hover:line-through transition-all duration-200"
-                >Education</a
+                class="hover:text-slate-900 transition-colors"
+                >Qualifications</a
               >
-              <a
-                href="#goals"
-                class="text-[#1c1b18] hover:line-through transition-all duration-200"
-                >Career Goals</a
+              <a href="#goals" class="hover:text-slate-900 transition-colors"
+                >Goals</a
               >
               <a
                 href="#contact"
-                class="px-4 py-2 border-2 border-[#1c1b18] bg-[#1c1b18] text-[#f4f1ea] hover:bg-transparent hover:text-[#1c1b18] transition-all duration-200 shadow-[2px_2px_0px_0px_rgba(28,27,24,1)]"
+                class="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors shadow-sm"
               >
-                Contact Desk
+                Get in Touch
               </a>
             </div>
           </div>
@@ -57,12 +65,11 @@
                   .classList.toggle('hidden')
               "
               type="button"
-              class="inline-flex items-center justify-center p-2 border-2 border-[#1c1b18] text-[#1c1b18] hover:bg-[#1c1b18] hover:text-[#f4f1ea] focus:outline-none transition-colors duration-200"
+              class="p-2 text-slate-600 hover:text-slate-900 focus:outline-none"
             >
-              <span class="sr-only">Toggle Dispatch Menu</span>
+              <span class="sr-only">Open Menu</span>
               <svg
-                class="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -70,7 +77,7 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  stroke-width="2.5"
+                  stroke-width="2"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -79,481 +86,376 @@
         </div>
       </div>
 
+      <!-- Mobile Menu -->
       <div
-        class="hidden bg-[#ede9df] border-t-2 border-[#1c1b18]"
+        class="hidden bg-white border-b border-slate-200 shadow-lg"
         id="mobile-menu"
       >
-        <div
-          class="px-4 pt-3 pb-5 space-y-2 font-sans text-sm font-bold uppercase tracking-wider"
-        >
+        <div class="px-6 pt-4 pb-6 space-y-3 text-base font-medium">
           <a
             href="#about"
             onclick="
               document.getElementById('mobile-menu').classList.add('hidden')
             "
-            class="block py-2 text-[#1c1b18] border-b border-[#1c1b18] border-dashed"
-            >About Me</a
+            class="block py-2 text-slate-600 hover:text-slate-900"
+            >About</a
           >
           <a
             href="#education"
             onclick="
               document.getElementById('mobile-menu').classList.add('hidden')
             "
-            class="block py-2 text-[#1c1b18] border-b border-[#1c1b18] border-dashed"
-            >Education & Skills</a
+            class="block py-2 text-slate-600 hover:text-slate-900"
+            >Qualifications & Skills</a
           >
           <a
             href="#goals"
             onclick="
               document.getElementById('mobile-menu').classList.add('hidden')
             "
-            class="block py-2 text-[#1c1b18] border-b border-[#1c1b18] border-dashed"
-            >Career Goals</a
+            class="block py-2 text-slate-600 hover:text-slate-900"
+            >Goals</a
           >
           <a
             href="#contact"
             onclick="
               document.getElementById('mobile-menu').classList.add('hidden')
             "
-            class="block mt-4 px-4 py-2.5 border-2 border-[#1c1b18] bg-[#1c1b18] text-[#f4f1ea] text-center"
+            class="block mt-4 px-4 py-2.5 bg-slate-900 text-white text-center rounded-lg shadow-sm"
           >
-            Contact Desk ↗
+            Get in Touch
           </a>
         </div>
       </div>
     </nav>
 
+    <!-- Main Introduction Section -->
     <section
       id="about"
-      class="min-h-screen bg-[#f4f1ea] text-[#1c1b18] font-serif py-20 px-4 sm:px-6 lg:px-8 border-b-4 border-[#1c1b18] relative overflow-hidden select-none"
+      class="min-h-[85vh] flex items-center bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 px-6 sm:px-8"
     >
-      <div
-        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1b18_1px,transparent_1px)] [background-size:16px_16px]"
-      ></div>
-      <div class="max-w-6xl mx-auto">
-        <div
-          class="text-center border-b-[6px] border-double border-[#1c1b18] pb-4 mb-8"
-        >
-          <p
-            class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-2"
-          >
-            Portfolio Special Edition // Developer Profile
-          </p>
-          <h2
-            class="text-5xl md:text-7xl font-black tracking-tighter uppercase font-serif my-2 opacity-0 [animation:inkBleed_1.8s_cubic-bezier(0.19,1,0.22,1)_forwards] [@keyframes_inkBleed_{0%{filter:blur(4px)_contrast(3);opacity:0;transform:scale(0.98);}50%{filter:blur(1px)_contrast(1.5);opacity:0.8;}100%{filter:blur(0px)_contrast(1);opacity:1;transform:scale(1);}}]"
-          >
-            The Full-Stack Gazette
-          </h2>
-          <div
-            class="flex justify-between items-center font-sans uppercase text-xs font-semibold border-t border-[#1c1b18] pt-2 mt-4 px-2"
-          >
-            <span>Daily Nation</span>
-            <span class="hidden sm:inline">Nairobi, Kenya</span>
-            <span class="font-bold">Price: Hard Work & Coffee</span>
-          </div>
-        </div>
-
-        <div
-          class="border-4 border-[#1c1b18] p-5 mb-8 bg-[#1c1b18] text-[#f4f1ea] flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-[6px_6px_0px_0px_rgba(28,27,24,0.15)]"
-        >
-          <div>
-            <p
-              class="font-sans text-xs uppercase tracking-widest text-slate-400 font-bold mb-1"
+      <div class="max-w-6xl mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Text Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <div
+              class="inline-flex items-center space-x-2 text-indigo-600 text-sm font-semibold tracking-wide uppercase"
             >
-              Featured Engineer Profile
-            </p>
+              <span>Software Engineer Portfolio</span>
+            </div>
+
             <h1
-              class="font-serif text-3xl md:text-4xl font-black tracking-tight text-white"
+              class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight"
             >
               Emmanuel Makori Obiero
             </h1>
-          </div>
-          <div
-            class="w-full md:w-auto bg-[#f4f1ea] text-[#1c1b18] px-4 py-3 md:px-6 border border-white font-sans font-black text-sm sm:text-base md:text-xl lg:text-2xl uppercase tracking-wider rounded-sm shadow-inner text-center md:text-left whitespace-normal sm:whitespace-nowrap"
-          >
-            ⚡ FULL-STACK SOFTWARE ENGINEER
-          </div>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div
-            class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
-          >
-            <div class="md:col-span-2">
-              <h3
-                class="text-2xl md:text-4xl font-bold tracking-tight leading-none mb-4 border-b-2 border-[#1c1b18] pb-2"
-              >
-                Architecting Scalable Digital Solutions
-              </h3>
-            </div>
+            <p class="text-xl font-medium text-slate-600">
+              Full-Stack Software Engineer
+            </p>
 
-            <div>
-              <p
-                class="text-base leading-relaxed text-justify font-sans text-[#2e2d29]"
-              >
-                <span
-                  class="float-left text-6xl font-serif font-black text-[#f4f1ea] bg-[#1c1b18] mr-3 mt-1 px-3 py-1 rounded-sm leading-none"
-                  >B</span
-                >
-                uilding scalable, AI-collaborative MERN stack applications
-                requires more than just clean syntax; it demands a comprehensive
-                understanding of end-to-end system architecture. By seamlessly
-                bridging frontend user interfaces with robust backend
-                infrastructure, complex datasets are transformed into intuitive
-                digital ecosystems built for performance.
-              </p>
-            </div>
+            <p class="text-base text-slate-600 leading-relaxed max-w-xl">
+              Building scalable web applications requires a comprehensive
+              understanding of end-to-end architecture. By seamlessly bridging
+              frontend user interfaces with robust backend infrastructure, I
+              transform complex data into intuitive digital products built for
+              high performance.
+            </p>
 
-            <div class="flex flex-col justify-between h-full">
-              <p
-                class="text-base leading-relaxed text-justify font-sans text-[#2e2d29] mb-4"
-              >
-                With a strong foundation rooted deeply in data analysis and IT
-                infrastructure, every codebase is engineered with scalability
-                and security at its core. From optimizing database queries to
-                deploying cloud-ready environments, the goal remains absolute:
-                designing technology systems tailored to solve real-world
-                operational challenges.
-              </p>
+            <p class="text-base text-slate-600 leading-relaxed max-w-xl">
+              With a strong foundation rooted in data analysis and IT systems,
+              every project is engineered with reliability and growth in mind.
+              From optimizing database queries to deploying web environments, my
+              focus is designing technology tailored to solve real-world
+              challenges.
+            </p>
 
-              <div
-                class="border border-[#1c1b18] p-2 bg-[#ede9df] self-center md:self-end w-full max-w-[240px]"
-              >
-                <img
-                  src="My image.jpeg"
-                  alt="Emmanuel Makori Obiero"
-                  class="w-full h-auto filter grayscale contrast-125 border border-[#1c1b18] object-cover aspect-[4/5]"
-                />
-                <p
-                  class="font-serif italic text-[11px] text-[#54524b] mt-1.5 text-center border-t border-[#1c1b18] border-dotted pt-1"
-                >
-                  Emmanuel Makori Obiero, Software Engineer.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-4 space-y-6">
-            <div
-              class="border-2 border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
-            >
-              <h4
-                class="font-serif font-bold uppercase tracking-wider text-sm border-b border-[#1c1b18] pb-2 mb-3"
-              >
-                System Editorial Overview
-              </h4>
-              <ul class="font-sans text-sm space-y-3 text-[#2e2d29]">
-                <li
-                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
-                >
-                  <span class="font-bold">Core Competency:</span
-                  ><span>Full-Stack Engineering</span>
-                </li>
-                <li
-                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
-                >
-                  <span class="font-bold">Engine Environment:</span
-                  ><span>Node.js, React, Express</span>
-                </li>
-                <li
-                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
-                >
-                  <span class="font-bold">Data Strategy:</span
-                  ><span>MongoDB & Power BI Analysis</span>
-                </li>
-                <li
-                  class="flex justify-between border-b border-[#1c1b18] border-dotted pb-1"
-                >
-                  <span class="font-bold">Infrastructure:</span
-                  ><span>IT Essentials & Networks</span>
-                </li>
-              </ul>
-              <div
-                class="mt-4 border-t border-[#1c1b18] pt-3 text-center italic font-serif text-xs text-[#54524b]"
-              >
-                "The best way to predict the future is to architect it."
-              </div>
-            </div>
-            <div
-              class="border-4 border-double border-[#1c1b18] p-6 text-center bg-transparent"
-            >
-              <p
-                class="font-serif text-xs uppercase tracking-widest text-[#54524b] mb-1"
-              >
-                - Advertisement -
-              </p>
-              <p class="font-serif font-black text-xl tracking-tight uppercase">
-                AI-COLLABORATIVE DESIGN
-              </p>
-              <p class="font-sans text-xs mt-1 text-[#2e2d29]">
-                Now accepting engineering briefs and architecture consultations.
-              </p>
+            <div class="pt-4 flex flex-wrap gap-4">
               <a
                 href="#contact"
-                class="inline-block mt-4 px-4 py-2 bg-[#1c1b18] text-[#f4f1ea] font-sans font-bold text-xs uppercase tracking-wider hover:bg-[#383631] transition-colors duration-200"
-                >Inquire Within</a
+                class="px-5 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-100"
               >
+                Available for consultations
+              </a>
+              <a
+                href="#education"
+                class="px-5 py-3 bg-white text-slate-700 font-medium rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm"
+              >
+                View qualifications
+              </a>
+            </div>
+          </div>
+
+          <!-- Image & Quick Specs Side Block -->
+          <div class="lg:col-span-5 space-y-6">
+            <div
+              class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200/60 max-w-sm mx-auto lg:ml-auto"
+            >
+              <img
+                src="My image.jpeg"
+                alt="Emmanuel Makori Obiero"
+                class="w-full h-auto rounded-xl object-cover aspect-[4/5] shadow-inner grayscale contrast-115"
+              />
+              <p class="text-xs text-slate-400 mt-3 text-center font-medium">
+                Emmanuel Makori Obiero, Software Engineer.
+              </p>
+            </div>
+
+            <!-- Profile Summary Card -->
+            <div
+              class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60 max-w-sm mx-auto lg:ml-auto"
+            >
+              <h3
+                class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4"
+              >
+                Core Areas
+              </h3>
+              <div class="space-y-3 text-sm text-slate-600">
+                <div
+                  class="flex justify-between border-b border-slate-100 pb-2"
+                >
+                  <span class="font-medium text-slate-900">Main Focus</span>
+                  <span>Full-Stack Engineering</span>
+                </div>
+                <div
+                  class="flex justify-between border-b border-slate-100 pb-2"
+                >
+                  <span class="font-medium text-slate-900">Primary Stack</span>
+                  <span>Node.js, React, Express</span>
+                </div>
+                <div
+                  class="flex justify-between border-b border-slate-100 pb-2"
+                >
+                  <span class="font-medium text-slate-900"
+                    >Data & Analysis</span
+                  >
+                  <span>MongoDB & Power BI</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-medium text-slate-900">Infrastructure</span>
+                  <span>IT Essentials & Networks</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Qualifications Section -->
     <section
       id="education"
-      class="min-h-screen bg-[#f4f1ea] text-[#1c1b18] font-serif py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-[#1c1b18] relative overflow-hidden select-none"
+      class="py-20 bg-slate-100/60 border-y border-slate-200/60 px-6 sm:px-8"
     >
-      <div
-        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1b18_1px,transparent_1px)] [background-size:16px_16px]"
-      ></div>
       <div class="max-w-6xl mx-auto">
-        <div class="border-b-[6px] border-double border-[#1c1b18] pb-3 mb-12">
+        <div class="mb-12">
           <p
-            class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-1 text-slate-600"
+            class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2"
           >
-            Section II // Technical Training
+            Background Summary
           </p>
-          <h2 class="text-4xl font-black uppercase tracking-tight font-serif">
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
             Qualifications & Skills
           </h2>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div
-            class="lg:col-span-7 space-y-8 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
-          >
-            <h3
-              class="font-sans font-black uppercase tracking-wider text-sm text-[#1c1b18] mb-6 border-b-2 border-[#1c1b18] pb-1 inline-block"
-            >
-              Academic & Technical Timeline
+          <!-- Timeline Area -->
+          <div class="lg:col-span-7 space-y-8">
+            <h3 class="text-lg font-semibold text-slate-900 mb-6">
+              Education & Certifications
             </h3>
-            <div
-              class="relative border-l-2 border-[#1c1b18] pl-6 ml-2 space-y-8"
-            >
-              <div class="relative">
+
+            <div class="space-y-6">
+              <!-- Item -->
+              <div
+                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40 relative"
+              >
                 <div
-                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
-                ></div>
-                <div class="flex justify-between items-start font-sans">
-                  <div>
-                    <span
-                      class="bg-[#1c1b18] text-[#f4f1ea] text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm"
-                      >Current</span
-                    >
-                    <h4
-                      class="font-serif text-xl font-bold mt-1 text-[#1c1b18]"
-                    >
-                      Full-Stack Software Development
-                    </h4>
-                    <p class="text-sm font-semibold text-slate-700">GOMYCODE</p>
-                  </div>
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"
+                >
+                  <h4 class="text-lg font-bold text-slate-900">
+                    Full-Stack Software Development
+                  </h4>
                   <span
-                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
-                    >2026</span
+                    class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md self-start sm:self-auto"
+                    >Current</span
                   >
                 </div>
+                <p class="text-sm text-slate-500">GOMYCODE • 2026</p>
               </div>
-              <div class="relative">
+
+              <!-- Item -->
+              <div
+                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40 relative"
+              >
                 <div
-                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
-                ></div>
-                <div class="flex justify-between items-start font-sans">
-                  <div>
-                    <span
-                      class="bg-blue-900 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm"
-                      >Specialization</span
-                    >
-                    <h4
-                      class="font-serif text-xl font-bold mt-1 text-[#1c1b18]"
-                    >
-                      Augmenting LLMs using RAG
-                    </h4>
-                    <p class="text-sm font-semibold text-slate-700">
-                      NVIDIA (Online Self-Taught Engine)
-                    </p>
-                  </div>
+                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"
+                >
+                  <h4 class="text-lg font-bold text-slate-900">
+                    Augmenting Language Models using RAG
+                  </h4>
                   <span
-                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
-                    >2026</span
+                    class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md self-start sm:self-auto"
+                    >Specialization</span
                   >
                 </div>
+                <p class="text-sm text-slate-500">
+                  NVIDIA (Online Self-Taught) • 2026
+                </p>
               </div>
-              <div class="relative">
-                <div
-                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
-                ></div>
-                <div class="flex justify-between items-start font-sans">
-                  <div>
-                    <h4 class="font-serif text-xl font-bold text-[#1c1b18]">
-                      Microsoft Elevate AI & AI Fluency
-                    </h4>
-                    <p class="text-sm font-semibold text-slate-700">
-                      ICT Authority (Online Class) & PLP Africa
-                    </p>
-                  </div>
-                  <span
-                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
-                    >2026</span
-                  >
-                </div>
+
+              <!-- Item -->
+              <div
+                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40"
+              >
+                <h4 class="text-lg font-bold text-slate-900 mb-1">
+                  Microsoft Elevate AI & AI Fluency
+                </h4>
+                <p class="text-sm text-slate-500">
+                  ICT Authority & PLP Africa • 2026
+                </p>
               </div>
-              <div class="relative">
-                <div
-                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
-                ></div>
-                <div class="flex justify-between items-start font-sans">
-                  <div>
-                    <h4 class="font-serif text-xl font-bold text-[#1c1b18]">
-                      IT Essentials (ITE) Certification
-                    </h4>
-                    <p class="text-sm font-semibold text-slate-700">
-                      AFRALTI (African Advanced Telecommunications Institute)
-                    </p>
-                  </div>
-                  <span
-                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
-                    >2026</span
-                  >
-                </div>
+
+              <!-- Item -->
+              <div
+                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40"
+              >
+                <h4 class="text-lg font-bold text-slate-900 mb-1">
+                  IT Essentials Certification
+                </h4>
+                <p class="text-sm text-slate-500">
+                  AFRALTI (African Advanced Telecommunications Institute) • 2026
+                </p>
               </div>
-              <div class="relative">
-                <div
-                  class="absolute -left-[31px] top-1.5 bg-[#1c1b18] w-4 h-4 rounded-full border-4 border-[#f4f1ea]"
-                ></div>
-                <div class="flex justify-between items-start font-sans">
-                  <div>
-                    <h4 class="font-serif text-xl font-bold text-[#1c1b18]">
-                      ICDL Certification (Phases 1 & 2)
-                    </h4>
-                    <p class="text-sm font-semibold text-slate-700">
-                      Kenyatta University
-                    </p>
-                  </div>
-                  <span
-                    class="text-xs font-bold text-[#1c1b18] bg-[#ede9df] px-2 py-1 border border-[#1c1b18]"
-                    >2026</span
-                  >
-                </div>
+
+              <!-- Item -->
+              <div
+                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40"
+              >
+                <h4 class="text-lg font-bold text-slate-900 mb-1">
+                  ICDL Certification (Phases 1 & 2)
+                </h4>
+                <p class="text-sm text-slate-500">Kenyatta University • 2026</p>
               </div>
             </div>
           </div>
 
+          <!-- Skills Areas -->
           <div class="lg:col-span-5 space-y-6">
-            <h3
-              class="font-sans font-black uppercase tracking-wider text-sm text-[#1c1b18] mb-2 border-b-2 border-[#1c1b18] pb-1 inline-block"
-            >
-              Technical Stack Inventory
+            <h3 class="text-lg font-semibold text-slate-900 mb-6">
+              Technical Skills
             </h3>
+
             <div
-              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
+              class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40 space-y-4"
             >
-              <h4
-                class="font-sans font-black text-xs uppercase tracking-wider text-red-800 mb-2"
-              >
-                ● SOFTWARE APPARATUS (MERN Stack)
-              </h4>
-              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >MongoDB</span
+              <div>
+                <h4
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
                 >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Express.js</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >React.js</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Node.js</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Frontend UI Design</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Backend Architecture</span
-                >
+                  Web Technologies
+                </h4>
+                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Express.js</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >React.js</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Frontend Design</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Backend Architecture</span
+                  >
+                </div>
               </div>
-            </div>
-            <div
-              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
-            >
-              <h4
-                class="font-sans font-black text-xs uppercase tracking-wider text-indigo-900 mb-2"
-              >
-                ● INTELLIGENCE INFRASTRUCTURE
-              </h4>
-              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Retrieval-Augmented Generation (RAG)</span
+
+              <div class="pt-4 border-t border-slate-100">
+                <h4
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
                 >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >LLM Engineering</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >AI Copilot Collaboration</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Microsoft Elevate Suite</span
-                >
+                  Intelligence Infrastructure
+                </h4>
+                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >RAG Systems</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >LLM Engineering</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >AI Integration</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Microsoft Elevate Suite</span
+                  >
+                </div>
               </div>
-            </div>
-            <div
-              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
-            >
-              <h4
-                class="font-sans font-black text-xs uppercase tracking-wider text-slate-800 mb-2"
-              >
-                ● DATA COMPUTATION & ANALYSIS
-              </h4>
-              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Microsoft Power BI</span
+
+              <div class="pt-4 border-t border-slate-100">
+                <h4
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
                 >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Relational Databases</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Advanced Excel Engine</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Digital Consultancy</span
-                >
+                  Data & Analysis
+                </h4>
+                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Microsoft Power BI</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Relational Databases</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Advanced Excel</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Digital Consultancy</span
+                  >
+                </div>
               </div>
-            </div>
-            <div
-              class="border border-[#1c1b18] p-4 bg-[#ede9df] shadow-[4px_4px_0px_0px_#1c1b18]"
-            >
-              <h4
-                class="font-sans font-black text-xs uppercase tracking-wider text-emerald-800 mb-2"
-              >
-                ● SYSTEM FOUNDATIONS
-              </h4>
-              <div class="flex flex-wrap gap-1.5 font-sans text-xs">
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Network Routing & Switching</span
+
+              <div class="pt-4 border-t border-slate-100">
+                <h4
+                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
                 >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Hardware Diagnosis & Repair</span
-                >
-                <span
-                  class="border border-[#1c1b18] bg-white px-2 py-1 font-bold"
-                  >Digital Literacy Infrastructure</span
-                >
+                  System Hardware & Networking
+                </h4>
+                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Routing & Switching</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Hardware Repair</span
+                  >
+                  <span
+                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
+                    >Digital Literacy</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -561,149 +463,116 @@
       </div>
     </section>
 
-    <section
-      id="goals"
-      class="min-h-screen bg-[#f4f1ea] text-[#1c1b18] font-serif py-16 px-4 sm:px-6 lg:px-8 border-b-4 border-[#1c1b18] relative overflow-hidden select-none"
-    >
-      <div
-        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#1c1b18_1px,transparent_1px)] [background-size:16px_16px]"
-      ></div>
+    <!-- Goals Section -->
+    <section id="goals" class="py-20 bg-white px-6 sm:px-8">
       <div class="max-w-6xl mx-auto">
-        <div class="border-b-[6px] border-double border-[#1c1b18] pb-3 mb-12">
+        <div class="mb-12">
           <p
-            class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-1 text-slate-600"
+            class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2"
           >
-            Section III // Future Trajectory
+            Future Strategy
           </p>
-          <h2 class="text-4xl font-black uppercase tracking-tight font-serif">
-            Strategic Career Blueprint
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
+            Career Blueprint
           </h2>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div
-            class="lg:col-span-8 space-y-8 border-b lg:border-b-0 lg:border-r border-[#1c1b18] border-dashed pb-8 lg:pb-0 lg:pr-8"
-          >
-            <div
-              class="bg-[#1c1b18] text-[#f4f1ea] p-6 rounded-sm shadow-[4px_4px_0px_0px_rgba(28,27,24,0.15)] mb-8"
-            >
+          <div class="lg:col-span-8 space-y-6">
+            <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-md">
               <h3
-                class="font-sans font-black text-xs uppercase tracking-widest text-slate-400 mb-2"
+                class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3"
               >
-                ● EXECUTIVE VISION
+                Core Vision
               </h3>
-              <p
-                class="text-xl md:text-2xl font-serif font-bold italic leading-relaxed text-white"
-              >
-                "To scale from a high-performance engineer into a technology
-                executive—leveraging deep AI fluency and full-stack architecture
-                to build market-disrupting products while fostering
-                hyper-focused engineering ecosystems."
+              <p class="text-lg sm:text-xl font-medium leading-relaxed">
+                "To grow from a high-performance engineer into a technology
+                leader—leveraging AI capabilities and full-stack architecture to
+                build innovative software solutions while supporting impactful
+                developer communities."
               </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans">
-              <div class="border border-[#1c1b18] p-5 bg-[#ede9df]">
-                <h4
-                  class="font-black text-sm uppercase tracking-wider text-red-800 border-b border-[#1c1b18] pb-2 mb-3"
-                >
-                  01 / Core Product Architecture
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div
+                class="border border-slate-200 p-6 rounded-xl bg-slate-50/50"
+              >
+                <h4 class="font-bold text-slate-900 mb-2">
+                  Product Architecture
                 </h4>
-                <p
-                  class="text-sm text-[#2e2d29] leading-relaxed text-justify mb-4"
-                >
-                  Committed to engineering top-tier, highly optimized MERN stack
-                  applications that bridge clean consumer logic with heavy
-                  enterprise backend systems.
+                <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                  Committed to building reliable, highly optimized web
+                  applications that connect seamless consumer interfaces with
+                  powerful backend databases.
                 </p>
-                <p class="text-sm text-[#2e2d29] leading-relaxed text-justify">
-                  By continuous mastery of retrieval engines (RAG) and
-                  intelligent systems, the focus remains on building native AI
-                  solutions designed to enhance operational performance and user
-                  productivity.
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  By mastering modern retrieval frameworks and dynamic code
+                  systems, my focus remains on developing native tools that
+                  enhance productivity.
                 </p>
               </div>
-              <div class="border border-[#1c1b18] p-5 bg-[#ede9df]">
-                <h4
-                  class="font-black text-sm uppercase tracking-wider text-indigo-900 border-b border-[#1c1b18] pb-2 mb-3"
-                >
-                  02 / Ecosystem & Leadership
+
+              <div
+                class="border border-slate-200 p-6 rounded-xl bg-slate-50/50"
+              >
+                <h4 class="font-bold text-slate-900 mb-2">
+                  Leadership & Community
                 </h4>
-                <p
-                  class="text-sm text-[#2e2d29] leading-relaxed text-justify mb-4"
-                >
-                  Actively collaborating with high-growth engineering teams to
-                  cross-pollinate technical insights and build an elite,
-                  hyper-focused community of tech builders.
+                <p class="text-sm text-slate-600 leading-relaxed mb-3">
+                  Actively collaborating with technical teams to share
+                  engineering insights and support a growing network of digital
+                  creators.
                 </p>
-                <p class="text-sm text-[#2e2d29] leading-relaxed text-justify">
-                  The ultimate architectural target is operational leadership:
-                  steering engineering teams as a founder and CEO to deploy
-                  innovative software that answers urgent consumer demands.
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  The long-term objective centers on technology management:
+                  driving product strategy and guiding engineering teams to
+                  launch impactful solutions.
                 </p>
               </div>
             </div>
           </div>
 
+          <!-- Strategic Targets Column -->
           <div class="lg:col-span-4 space-y-6">
-            <h3
-              class="font-sans font-black uppercase tracking-wider text-sm text-[#1c1b18] mb-2 border-b-2 border-[#1c1b18] pb-1 inline-block"
-            >
-              Strategic Objectives
-            </h3>
+            <h3 class="text-lg font-semibold text-slate-900">Milestones</h3>
+
             <div
-              class="border-4 border-double border-[#1c1b18] p-5 bg-transparent space-y-4"
+              class="bg-white border border-slate-200 p-6 rounded-xl space-y-5 shadow-sm"
             >
               <div>
-                <span
-                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-[#1c1b18] text-[#f4f1ea] px-1.5 py-0.5"
-                  >Tactical</span
-                >
-                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
-                  High-Impact Full-Stack Engineering
+                <h5 class="font-bold text-sm text-slate-900">
+                  Full-Stack Development
                 </h5>
-                <p class="font-sans text-xs text-slate-700 mt-0.5">
-                  Deploying production-ready MERN apps with robust, data-driven
-                  backends.
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Deploying production-ready applications with highly secure,
+                  data-focused databases.
                 </p>
               </div>
-              <div class="border-t border-[#1c1b18] border-dotted pt-3">
-                <span
-                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-[#1c1b18] text-[#f4f1ea] px-1.5 py-0.5"
-                  >Intelligence</span
-                >
-                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
+              <div class="border-t border-slate-100 pt-4">
+                <h5 class="font-bold text-sm text-slate-900">
                   Advanced AI Implementation
                 </h5>
-                <p class="font-sans text-xs text-slate-700 mt-0.5">
-                  Building custom LLM augmentations, automated workflows, and
-                  RAG architectures.
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Building custom integrations, language models, and search
+                  architectures.
                 </p>
               </div>
-              <div class="border-t border-[#1c1b18] border-dotted pt-3">
-                <span
-                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-[#1c1b18] text-[#f4f1ea] px-1.5 py-0.5"
-                  >Ecosystem</span
-                >
-                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
+              <div class="border-t border-slate-100 pt-4">
+                <h5 class="font-bold text-sm text-slate-900">
                   Community Integration
                 </h5>
-                <p class="font-sans text-xs text-slate-700 mt-0.5">
-                  Cultivating collaboration channels and scaling an active
-                  developer network.
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Fostering active collaboration spaces and professional
+                  developer networks.
                 </p>
               </div>
-              <div class="border-t border-[#1c1b18] border-dotted pt-3">
-                <span
-                  class="font-sans text-[10px] font-black uppercase tracking-wider bg-red-800 text-white px-1.5 py-0.5"
-                  >Apex Target</span
-                >
-                <h5 class="font-serif font-bold text-base mt-1 text-[#1c1b18]">
-                  Executive Tech Leadership (CEO)
+              <div class="border-t border-slate-100 pt-4">
+                <h5 class="font-bold text-sm text-indigo-600">
+                  Technology Leadership
                 </h5>
-                <p class="font-sans text-xs text-slate-700 mt-0.5">
-                  Founding and scaling technology-driven enterprises in regional
-                  growth markets.
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Founding and scaling tech-focused software platforms in
+                  growing regional markets.
                 </p>
               </div>
             </div>
@@ -712,63 +581,53 @@
       </div>
     </section>
 
-    <section
-      id="contact"
-      class="bg-[#1c1b18] text-[#f4f1ea] font-serif py-16 px-4 sm:px-6 lg:px-8 border-t-4 border-[#1c1b18] relative overflow-hidden select-none"
-    >
-      <div
-        class="absolute inset-0 opacity-[0.02] pointer-events-none bg-[radial-gradient(#f4f1ea_1px,transparent_1px)] [background-size:16px_16px]"
-      ></div>
+    <!-- Communication / Contact Section -->
+    <section id="contact" class="bg-slate-900 text-white py-20 px-6 sm:px-8">
       <div class="max-w-6xl mx-auto">
         <div
-          class="border-b-2 border-slate-700 pb-3 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-4"
+          class="border-b border-slate-800 pb-8 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-4"
         >
           <div>
             <p
-              class="font-sans uppercase tracking-[0.2em] text-xs font-bold mb-1 text-slate-400"
+              class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2"
             >
-              Section IV // Communication Channels
+              Connect
             </p>
-            <h2
-              class="text-4xl font-black uppercase tracking-tight font-serif text-white"
-            >
-              Establish Connection
+            <h2 class="text-3xl font-bold tracking-tight text-white">
+              Contact Information
             </h2>
           </div>
           <div
-            class="font-sans text-xs uppercase bg-[#f4f1ea] text-[#1c1b18] px-3 py-1 font-bold tracking-wider rounded-sm"
+            class="text-xs font-semibold bg-white/10 text-slate-200 px-3 py-1.5 rounded-md"
           >
-            Available for Briefing
+            Open to new projects
           </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div class="lg:col-span-7 space-y-6 font-sans">
-            <h3 class="font-serif font-bold text-2xl text-white mb-4">
-              Direct Inquiries & Project Briefs
+          <!-- Text and Direct Contacts -->
+          <div class="lg:col-span-7 space-y-6">
+            <h3 class="text-xl font-medium text-white">
+              Direct Messages & Projects
             </h3>
-            <p class="text-slate-300 text-sm leading-relaxed max-w-xl mb-8">
-              Whether you are an industry recruiter looking to scale your
-              engineering team, or a collaborator seeking to construct
-              cutting-edge MERN stack solutions, use the verified channels below
-              to initiate contact.
+            <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+              Whether you are an industry representative looking to expand your
+              engineering team, or a product collaborator seeking to construct
+              clean software architectures, feel free to reach out directly.
             </p>
 
-            <div class="space-y-4 max-w-lg">
+            <div class="space-y-3 max-w-md pt-2">
               <a
                 href="mailto:emmanuelmakobiero@gmail.com"
-                class="group flex items-center gap-4 p-3 border border-slate-800 bg-[#262420] hover:bg-[#32302a] hover:border-slate-600 transition-all duration-200 rounded-sm"
+                class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/80 transition-all"
               >
-                <div
-                  class="p-2 bg-[#f4f1ea] text-[#1c1b18] rounded-sm group-hover:scale-105 transition-transform"
-                >
+                <div class="p-2.5 bg-white text-slate-900 rounded-lg">
                   <svg
                     class="w-5 h-5"
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2"
                     viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       stroke-linecap="round"
@@ -779,101 +638,120 @@
                 </div>
                 <div class="truncate">
                   <p
-                    class="text-[10px] uppercase font-black tracking-wider text-slate-400"
+                    class="text-[11px] font-bold tracking-wider text-slate-400 uppercase"
                   >
-                    Secure Mail Server
+                    Email Address
                   </p>
-                  <p
-                    class="text-sm font-bold text-white tracking-wide truncate"
-                  >
+                  <p class="text-sm font-semibold text-white truncate">
                     emmanuelmakobiero@gmail.com
                   </p>
                 </div>
               </a>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
                   href="tel:0711617528"
-                  class="group flex items-center gap-4 p-3 border border-slate-800 bg-[#262420] hover:bg-[#32302a] hover:border-slate-600 transition-all duration-200 rounded-sm"
+                  class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/80 transition-all"
                 >
-                  <div
-                    class="p-2 bg-[#f4f1ea] text-[#1c1b18] rounded-sm group-hover:scale-105 transition-transform"
-                  >
+                  <div class="p-2.5 bg-white text-slate-900 rounded-lg">
                     <svg
                       class="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
                       viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M2.25 6.622kM2.25 9.c0 8.618 7.033 15.65 15.65 15.65 1.014 0 2.008-.097 2.97-.282A2.01 2.01 0 0022.5 22.41v-3.715a2.01 2.01 0 00-1.637-1.979l-3.374-.675a2.01 2.01 0 00-1.848.738l-1.42 1.42A16.533 16.533 0 017.165 11.23l1.42-1.42a2.01 2.01 0 00.738-1.848l-.675-3.374A2.01 2.01 0 006.71 3H3a2.01 2.01 0 00-1.979 1.637A16.536 16.536 0 002.25 6.622z"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       ></path>
                     </svg>
                   </div>
                   <div>
                     <p
-                      class="text-[10px] uppercase font-black tracking-wider text-slate-400"
+                      class="text-[11px] font-bold tracking-wider text-slate-400 uppercase"
                     >
-                      Primary Voice Line
+                      Primary Phone
                     </p>
-                    <p class="text-sm font-bold text-white tracking-wide">
-                      0711 617 528
-                    </p>
+                    <p class="text-sm font-semibold text-white">0711 617 528</p>
                   </div>
                 </a>
+
                 <a
                   href="tel:0790558418"
-                  class="group flex items-center gap-4 p-3 border border-slate-800 bg-[#262420] hover:bg-[#32302a] hover:border-slate-600 transition-all duration-200 rounded-sm"
+                  class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/80 transition-all"
                 >
-                  <div
-                    class="p-2 bg-[#f4f1ea] text-[#1c1b18] rounded-sm group-hover:scale-105 transition-transform"
-                  >
+                  <div class="p-2.5 bg-white text-slate-900 rounded-lg">
                     <svg
                       class="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       stroke-width="2"
                       viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        d="M2.25 6.622kM2.25 9.c0 8.618 7.033 15.65 15.65 15.65 1.014 0 2.008-.097 2.97-.282A2.01 2.01 0 0022.5 22.41v-3.715a2.01 2.01 0 00-1.637-1.979l-3.374-.675a2.01 2.01 0 00-1.848.738l-1.42 1.42A16.533 16.533 0 017.165 11.23l1.42-1.42a2.01 2.01 0 00.738-1.848l-.675-3.374A2.01 2.01 0 006.71 3H3a2.01 2.01 0 00-1.979 1.637A16.536 16.536 0 002.25 6.622z"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                       ></path>
                     </svg>
                   </div>
                   <div>
                     <p
-                      class="text-[10px] uppercase font-black tracking-wider text-slate-400"
+                      class="text-[11px] font-bold tracking-wider text-slate-400 uppercase"
                     >
-                      Secondary Voice Line
+                      Secondary Phone
                     </p>
-                    <p class="text-sm font-bold text-white tracking-wide">
-                      0790 558 418
-                    </p>
+                    <p class="text-sm font-semibold text-white">0790 558 418</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="lg:col-span-5 space-y-6">
+          <!-- Social Links Grid -->
+          <div class="lg:col-span-5 space-y-4 w-full">
             <h3
-              class="font-sans font-black uppercase tracking-wider text-sm text-slate-400 border-b-2 border-slate-700 pb-1 inline-block"
+              class="text-xs font-bold text-slate-400 uppercase tracking-wider"
             >
-              External Indexes
+              External Profiles
             </h3>
+
             <div
-              class="border border-slate-800 p-5 bg-[#262420] rounded-sm shadow-md"
+              class="p-5 bg-slate-800/30 border border-slate-800 rounded-xl space-y-4"
             >
-              <div class="flex items-center gap-3 mb-3">
+              <div class="flex items-center gap-3">
                 <svg
-                  class="w-6 h-6 text-[#f4f1ea]"
+                  class="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+                <span class="text-sm font-semibold text-white">LinkedIn</span>
+              </div>
+              <p class="text-xs text-slate-400">
+                Connect professionally and review industry networks.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/emmanuel-makori-obiero-3125203b5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full text-center bg-indigo-600 text-white font-medium text-sm py-2.5 rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-900/20"
+              >
+                Open LinkedIn Profile
+              </a>
+            </div>
+
+            <div
+              class="p-5 bg-slate-800/30 border border-slate-800 rounded-xl space-y-4"
+            >
+              <div class="flex items-center gap-3">
+                <svg
+                  class="w-6 h-6 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -883,30 +761,27 @@
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <h4
-                  class="font-sans font-black text-sm uppercase tracking-wide text-white"
-                >
-                  View Github Profile
-                </h4>
+                <span class="text-sm font-semibold text-white">GitHub</span>
               </div>
-              <p class="font-sans text-xs text-slate-400 mb-4">
-                Review active repositories and Public Projects.
+              <p class="text-xs text-slate-400">
+                Review public repositories and code frameworks.
               </p>
               <a
                 href="https://github.com/Emmanuel-Makori-Obiero"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-block w-full text-center bg-[#f4f1ea] text-[#1c1b18] font-sans font-black text-xs uppercase tracking-wider py-2.5 hover:bg-white transition-colors duration-200 rounded-sm"
-                >View Github Profile ↗</a
+                class="block w-full text-center bg-white text-slate-900 font-medium text-sm py-2.5 rounded-lg hover:bg-slate-100 transition-colors"
               >
+                Open GitHub Profile
+              </a>
             </div>
 
             <div
-              class="border border-slate-800 p-5 bg-[#262420] rounded-sm shadow-md"
+              class="p-5 bg-slate-800/30 border border-slate-800 rounded-xl space-y-4"
             >
-              <div class="flex items-center gap-3 mb-3">
+              <div class="flex items-center gap-3">
                 <svg
-                  class="w-6 h-6 text-[#f4f1ea]"
+                  class="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
@@ -916,31 +791,29 @@
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
                   <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
-                <h4
-                  class="font-sans font-black text-sm uppercase tracking-wide text-white"
-                >
-                  Social Media Profile
-                </h4>
+                <span class="text-sm font-semibold text-white">Instagram</span>
               </div>
-              <p class="font-sans text-xs text-slate-400 mb-4">
-                View Social Media profile.
+              <p class="text-xs text-slate-400">
+                View social updates and personal updates.
               </p>
               <a
                 href="https://www.instagram.com/em.makori/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-block w-full text-center border border-slate-700 font-sans font-black text-xs uppercase tracking-wider py-2.5 hover:bg-[#32302a] hover:text-white hover:border-slate-500 transition-colors duration-200 rounded-sm"
-                >View Social Media Profile ↗</a
+                class="block w-full text-center border border-slate-700 font-medium text-sm py-2.5 rounded-lg hover:bg-slate-800 text-white transition-colors"
               >
+                Open Social Media
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- Footer Meta Info -->
         <div
-          class="border-t border-slate-800 mt-16 pt-6 flex flex-col sm:flex-row justify-between items-center text-[10px] font-sans text-slate-500 uppercase tracking-widest"
+          class="border-t border-slate-800 mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4"
         >
           <p>© 2026 Emmanuel Makori Obiero. All Rights Reserved.</p>
-          <p>Built with Pure HTML & Tailwind CSS Engine</p>
+          <p>Built with HTML & Tailwind CSS</p>
         </div>
       </div>
     </section>
