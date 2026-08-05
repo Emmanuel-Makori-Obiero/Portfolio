@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css"
+    />
     <style>
       :root {
         --ink: #14161a;
@@ -263,11 +267,35 @@
       .tech-chip {
         border: 1px solid var(--line);
         border-radius: 12px;
-        padding: 16px 10px;
+        padding: 18px 10px 14px;
         text-align: center;
         font-size: 13px;
         color: #333640;
         background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .tech-chip i {
+        font-size: 26px;
+      }
+      .tech-chip .fallback-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 6px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 10.5px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: -0.02em;
+      }
+      .tag-icon {
+        font-size: 12px;
+        margin-right: 5px;
       }
 
       /* qualifications list */
@@ -294,6 +322,16 @@
         font-size: 13px;
         color: var(--muted);
         white-space: nowrap;
+      }
+      .qual-cert {
+        font-size: 12.5px;
+        color: var(--accent);
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 6px;
+      }
+      .qual-cert:hover {
+        text-decoration: underline;
       }
 
       /* projects */
@@ -554,14 +592,30 @@
         </p>
         <div class="tech-label">TOOLS I REACH FOR</div>
         <div class="tech-grid">
-          <div class="tech-chip">Node.js</div>
-          <div class="tech-chip">React</div>
-          <div class="tech-chip">Express</div>
-          <div class="tech-chip">MongoDB</div>
-          <div class="tech-chip">Supabase</div>
-          <div class="tech-chip">Power BI</div>
-          <div class="tech-chip">RAG / LLMs</div>
-          <div class="tech-chip">USSD & IVR</div>
+          <div class="tech-chip">
+            <i class="devicon-nodejs-plain colored"></i>Node.js
+          </div>
+          <div class="tech-chip">
+            <i class="devicon-react-original colored"></i>React
+          </div>
+          <div class="tech-chip">
+            <i class="devicon-express-original"></i>Express
+          </div>
+          <div class="tech-chip">
+            <i class="devicon-mongodb-plain colored"></i>MongoDB
+          </div>
+          <div class="tech-chip">
+            <i class="devicon-supabase-plain colored"></i>Supabase
+          </div>
+          <div class="tech-chip">
+            <span class="fallback-icon">BI</span>Power BI
+          </div>
+          <div class="tech-chip">
+            <span class="fallback-icon">AI</span>RAG / LLMs
+          </div>
+          <div class="tech-chip">
+            <span class="fallback-icon">••</span>USSD & IVR
+          </div>
         </div>
       </div>
     </section>
@@ -586,6 +640,13 @@
               ICT Authority Kenya, with Pathways Technologies · ID
               ICTA-1782721075-7426-43916
             </div>
+            <a
+              class="qual-cert"
+              href="Emmanuel certs and docs/emmanuelmakobiero%40gmail.com-Artificial-Intelligence-Training-Pathways-AI-Certificate-June26-Digital-Skills-Training.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View certificate →</a
+            >
           </div>
           <div class="qual-year">Jun 2026</div>
         </div>
@@ -596,6 +657,13 @@
               ethics
             </div>
             <div class="qual-meta">PLP Africa · 4-week program</div>
+            <a
+              class="qual-cert"
+              href="Emmanuel certs and docs/Emmanuel%20Makori%20Obiero%20certificate%20PLP.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View certificate →</a
+            >
           </div>
           <div class="qual-year">2026</div>
         </div>
@@ -607,6 +675,13 @@
               Presentation, Cyber Security, Data Protection, Big Data, IoT, Data
               Analytics, AI · ID KE10015868
             </div>
+            <a
+              class="qual-cert"
+              href="Emmanuel certs and docs/ICDL%20Profile%20Certificate%20-%20Emmanuel%20Obiero.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View certificate →</a
+            >
           </div>
           <div class="qual-year">Mar–Apr 2026</div>
         </div>
@@ -614,6 +689,13 @@
           <div>
             <div class="qual-name">IT Essentials</div>
             <div class="qual-meta">AFRALTI, via Cisco Networking Academy</div>
+            <a
+              class="qual-cert"
+              href="Emmanuel certs and docs/IT_Essentials_certificate_elmakobiero-gmail-com_74b16754-d803-4caa-bd85-ae1776e81596-1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View certificate →</a
+            >
           </div>
           <div class="qual-year">Feb 2026</div>
         </div>
@@ -697,9 +779,17 @@
                 $10-20/month tools into one free assistant.
               </p>
               <div class="proj-tags">
-                <span>React + TypeScript</span><span>Electron</span
+                <span
+                  ><i class="devicon-react-original colored tag-icon"></i>React
+                  + TypeScript</span
+                ><span
+                  ><i class="devicon-electron-original tag-icon"></i
+                  >Electron</span
                 ><span>Capacitor</span><span>Gemini API</span
-                ><span>Supabase</span>
+                ><span
+                  ><i class="devicon-supabase-plain colored tag-icon"></i
+                  >Supabase</span
+                >
               </div>
             </div>
           </div>
@@ -777,7 +867,12 @@
                 dashboards.
               </p>
               <div class="proj-tags">
-                <span>React 19 + TanStack Start</span><span>Supabase</span
+                <span
+                  ><i class="devicon-react-original colored tag-icon"></i>React
+                  19 + TanStack Start</span
+                ><span
+                  ><i class="devicon-supabase-plain colored tag-icon"></i
+                  >Supabase</span
                 ><span>Mapbox/Leaflet</span><span>M-Pesa Daraja API</span
                 ><span>PWA</span>
               </div>
@@ -818,7 +913,10 @@
                 even in resource- constrained conditions.
               </p>
               <div class="proj-tags">
-                <span>FastAPI</span><span>Neo4j</span><span>LangGraph</span
+                <span
+                  ><i class="devicon-fastapi-plain colored tag-icon"></i
+                  >FastAPI</span
+                ><span>Neo4j</span><span>LangGraph</span
                 ><span>Africa's Talking</span><span>ElevenLabs</span
                 ><span>ChromaDB</span>
               </div>
@@ -939,8 +1037,10 @@
                 checkout.
               </p>
               <div class="proj-tags">
-                <span>HTML/CSS/JS</span><span>Buyer/seller roles</span
-                ><span>Cart & checkout</span>
+                <span
+                  ><i class="devicon-html5-plain colored tag-icon"></i
+                  >HTML/CSS/JS</span
+                ><span>Buyer/seller roles</span><span>Cart & checkout</span>
               </div>
             </div>
           </div>
@@ -977,7 +1077,13 @@
                 interactivity to make a gesture feel personal.
               </p>
               <div class="proj-tags">
-                <span>HTML/CSS/JS</span><span>Tailwind CSS</span>
+                <span
+                  ><i class="devicon-html5-plain colored tag-icon"></i
+                  >HTML/CSS/JS</span
+                ><span
+                  ><i class="devicon-tailwindcss-plain colored tag-icon"></i
+                  >Tailwind CSS</span
+                >
               </div>
             </div>
           </div>
