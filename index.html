@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="ACb3I6z-tGggIBYWUW_D1LM8Y2qgoya-R0HjvuPjcqM" />
+    <meta
+      name="google-site-verification"
+      content="ACb3I6z-tGggIBYWUW_D1LM8Y2qgoya-R0HjvuPjcqM"
+    />
     <title>Emmanuel Makori Obiero // Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,6 +48,9 @@
                 href="#education"
                 class="hover:text-slate-900 transition-colors"
                 >Qualifications</a
+              >
+              <a href="#projects" class="hover:text-slate-900 transition-colors"
+                >Projects</a
               >
               <a href="#goals" class="hover:text-slate-900 transition-colors"
                 >Goals</a
@@ -110,6 +116,14 @@
             >Qualifications & Skills</a
           >
           <a
+            href="#projects"
+            onclick="
+              document.getElementById('mobile-menu').classList.add('hidden')
+            "
+            class="block py-2 text-slate-600 hover:text-slate-900"
+            >Projects</a
+          >
+          <a
             href="#goals"
             onclick="
               document.getElementById('mobile-menu').classList.add('hidden')
@@ -173,10 +187,10 @@
 
             <div class="pt-4 flex flex-wrap gap-4">
               <a
-                href="#contact"
+                href="#projects"
                 class="px-5 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-100"
               >
-                Available for consultations
+                View my projects
               </a>
               <a
                 href="#education"
@@ -463,6 +477,639 @@
         </div>
       </div>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white px-6 sm:px-8">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-10">
+          <p
+            class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2"
+          >
+            Selected Work
+          </p>
+          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
+            Projects
+          </h2>
+          <p class="text-sm text-slate-500 mt-2 max-w-xl">
+            A collection of applications spanning AI, transport, agriculture,
+            e-commerce, and more, each built around a real problem.
+          </p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div id="filter-bar" class="flex flex-wrap gap-2 mb-10">
+          <button
+            data-filter="all"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-900 text-white transition-colors"
+          >
+            All
+          </button>
+          <button
+            data-filter="education"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          >
+            Education / AI
+          </button>
+          <button
+            data-filter="transport"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          >
+            Transport
+          </button>
+          <button
+            data-filter="agriculture"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          >
+            Agriculture
+          </button>
+          <button
+            data-filter="ecommerce"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          >
+            E-Commerce
+          </button>
+          <button
+            data-filter="valentines"
+            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          >
+            Valentines
+          </button>
+        </div>
+
+        <!-- Project grid -->
+        <div
+          id="project-grid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Jarvis -->
+          <div class="project-card" data-category="education">
+            <a
+              href="https://github.com/Emmanuel-Makori-Obiero/Jarvis"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md"
+                  >Education & AI</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Jarvis</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Most AI copilots are locked to a browser tab or a single paid
+                IDE plugin, which is out of reach for students and junior
+                developers who can't justify multiple subscriptions. Jarvis is a
+                single voice driven assistant that follows the user across
+                desktop, mobile, and their code editor. It manages tasks by
+                voice, reads and edits files directly inside VS Code, runs
+                research on demand, and remembers context between sessions. For
+                self taught developers building skills without paid tooling, it
+                collapses several $10 to $20 per month tools into one free,
+                cross platform assistant, lowering the cost of entry into
+                serious software work.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >React + TypeScript</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Electron</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Capacitor (Android)</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Gemini API</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Supabase</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >VS Code Extension</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-indigo-600"
+                >Live demo →</span
+              >
+            </a>
+          </div>
+
+          <!-- Eduvance -->
+          <div class="project-card" data-category="education">
+            <a
+              href="https://eduvancereal.base44.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md"
+                  >Education & AI</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Eduvance</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Students already spend hours a day on social media and gaming,
+                chasing the same dopamine loop that makes those platforms hard
+                to put down. Eduvance redirects that same pull toward studying
+                instead of fighting it. A student uploads their class notes, and
+                the platform turns them into games and anime style lessons that
+                teach the material visually. There is also a space where
+                students write and share their own notes with each other,
+                turning revision into something social rather than solitary. The
+                goal is simple: keep the addictive engagement students already
+                have, but point it at learning instead of away from it.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Base44</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >AI Content Generation</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Gamified Learning</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Peer Note Sharing</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-indigo-600"
+                >Live demo →</span
+              >
+            </a>
+          </div>
+
+          <!-- Matu -->
+          <div class="project-card" data-category="transport">
+            <a
+              href="https://matu-gamma.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md"
+                  >Transport</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Matu</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Matatus move most of Kenya, but booking one still means standing
+                at a stage guessing when a vehicle will show up, with no way to
+                reserve a seat or know if it is full. Matu turns that into a
+                real booking system. Passengers pick a route, book a seat, pay
+                through M-Pesa, and track their vehicle live on a map. Drivers
+                manage their trips and bookings from the road, and sacco admins
+                oversee their fleet, drivers, and commission from one dashboard.
+                Complaints, wallets, and role based access for passengers,
+                drivers, conductors, and admins are all built in, so the same
+                app serves everyone who touches a single trip, not just the
+                rider.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >React 19 + TanStack Start</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Supabase (Postgres + Auth)</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Mapbox / Leaflet</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >M-Pesa (Daraja API)</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >PWA</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-emerald-600"
+                >Live demo →</span
+              >
+            </a>
+          </div>
+
+          <!-- Agrion -->
+          <div class="project-card" data-category="agriculture">
+            <a
+              href="https://github.com/Emmanuel-Makori-Obiero/AGRION"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md"
+                  >Agriculture</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Agrion</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Most smallholder farming advisory apps assume a smartphone and
+                data, but the majority of Nigerian smallholder farmers only have
+                a basic phone and no reliable internet. Agrion works over USSD
+                and voice calls instead, so any farmer can dial in and get real
+                agronomy advice in their own language, no app or smartphone
+                required. Under the hood it pulls verified guidance from IITA
+                crop guides and NiMet weather forecasts stored in a knowledge
+                graph, translates it on the fly, and reads it back as natural
+                sounding speech. Because the advice comes from a structured
+                graph rather than free generation, answers stay accurate and
+                consistent even at telecom speed.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >FastAPI</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Neo4j</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >LangGraph</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Africa's Talking (USSD/IVR)</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >ElevenLabs</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >ChromaDB (RAG)</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-amber-600"
+                >View on GitHub →</span
+              >
+            </a>
+          </div>
+
+          <!-- Sauti ya Shamba -->
+          <div class="project-card" data-category="agriculture">
+            <a
+              href="https://sautiyashamba.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md"
+                  >Agriculture</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">
+                Sauti ya Shamba
+              </h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Around 4.5 million Kenyan farmers face the same problem as Mama
+                Njeri, a real case this project is built around: her crop caught
+                a fungus, her son sent a YouTube link to help, but she had no
+                data to open it, so she bought pesticide from an unqualified
+                seller and lost her entire harvest. Sauti ya Shamba, "the voice
+                of the farm", is built for exactly that gap. It delivers
+                verified crop, market price, and weather guidance over voice
+                calls, USSD, and SMS, in Swahili, so a farmer with a basic phone
+                and zero internet still gets an answer they can act on. Every
+                figure it gives is sourced and citable, so the information
+                replaces guesswork instead of adding to it.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Voice / USSD / SMS</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Swahili Language Support</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Market Price Data</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Sourced/Verified Content</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-amber-600"
+                >Live demo →</span
+              >
+            </a>
+          </div>
+
+          <!-- Dhamana POS -->
+          <div class="project-card" data-category="ecommerce">
+            <a
+              href="https://github.com/Emmanuel-Makori-Obiero/POS"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-md"
+                  >E-Commerce</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Dhamana POS</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Cloud based POS systems assume a small shop can afford a
+                reliable internet connection and a monthly subscription just to
+                ring up a sale, which many small retailers cannot. Dhamana POS
+                runs entirely offline on a single Windows computer, so a shop
+                keeps selling even when the internet does not. It handles
+                barcode checkout by scanner or camera, tracks real profit using
+                cost versus selling price, prints sales and profit reports as
+                PDF, and forecasts the next seven days of sales and stockouts
+                using only local sales history. Everything is stored on that one
+                machine, so setup is a double click install rather than a server
+                and a subscription.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Offline-first</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Local API</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Barcode/QR Scanning</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Sales Forecasting</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >PDF Reporting</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-sky-600"
+                >View on GitHub →</span
+              >
+            </a>
+          </div>
+
+          <!-- Crotchet Store -->
+          <div class="project-card" data-category="ecommerce">
+            <a
+              href="https://e-commerce-store-ten-hazel.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-md"
+                  >E-Commerce</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">
+                TheWrittenWhispers Crochet Store
+              </h3>
+              <p class="text-sm text-slate-600 mb-4">
+                Independent crochet makers usually sell through scattered
+                Instagram posts and WhatsApp messages, with no proper catalogue,
+                cart, or way to track orders. This store gives a small handmade
+                business an actual storefront. Sellers get a dashboard to list
+                products with images, categories, and pricing in KSh, while
+                buyers browse bags, hats, decor, and clothing, add items to a
+                cart, and place orders directly. Separate customer and seller
+                accounts mean the same platform serves both sides of the
+                transaction instead of forcing a maker to manage sales manually
+                across chat apps.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >HTML/CSS/JS</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Buyer/Seller Roles</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Cart & Checkout</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Seller Dashboard</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-sky-600"
+                >Live demo →</span
+              >
+            </a>
+          </div>
+
+          <!-- Loveletter -->
+          <div class="project-card" data-category="valentines">
+            <a
+              href="https://loveletter-indol-rho.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span
+                  class="text-xs font-semibold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md"
+                  >Valentines</span
+                >
+                <svg
+                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    transform="rotate(-45 12 12)"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Loveletter</h3>
+              <p class="text-sm text-slate-600 mb-4">
+                A small, personal web app built as a digital love letter. The
+                recipient enters their name on a quiet landing page, and the
+                letter that follows addresses them by name, turning a static
+                page into something that feels written specifically for them. It
+                is a simple idea executed with care: clean typography, a calm
+                layout, and just enough interactivity to make a personal gesture
+                feel personal.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >HTML/CSS/JS</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >Tailwind CSS</span
+                >
+                <span
+                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
+                  >URL Personalization</span
+                >
+              </div>
+              <span class="text-xs font-semibold text-rose-600"
+                >Live demo →</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach((b) => {
+            b.classList.remove("bg-slate-900", "text-white");
+            b.classList.add("bg-slate-100", "text-slate-700");
+          });
+          btn.classList.add("bg-slate-900", "text-white");
+          btn.classList.remove("bg-slate-100", "text-slate-700");
+
+          const filter = btn.dataset.filter;
+          document.querySelectorAll(".project-card").forEach((card) => {
+            card.style.display =
+              filter === "all" || card.dataset.category === filter
+                ? ""
+                : "none";
+          });
+        });
+      });
+    </script>
 
     <!-- Goals Section -->
     <section id="goals" class="py-20 bg-white px-6 sm:px-8">
