@@ -7,1084 +7,979 @@
       name="google-site-verification"
       content="ACb3I6z-tGggIBYWUW_D1LM8Y2qgoya-R0HjvuPjcqM"
     />
-    <title>Emmanuel Makori Obiero // Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Emmanuel Obiero</title>
+    <meta
+      name="description"
+      content="Full-stack software engineer in Nairobi, Kenya, building AI-powered and offline-first software for transport, agriculture, and education."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <style>
+      :root {
+        --ink: #14161a;
+        --muted: #6b7280;
+        --line: #e7e5e0;
+        --paper: #fbfaf8;
+        --accent: #2952e3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
       body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--paper);
+        color: var(--ink);
         font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      .display {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* nav */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(251, 250, 248, 0.85);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+      }
+      .word {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: -0.01em;
+      }
+      .navlinks {
+        display: flex;
+        gap: 28px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .navlinks a:hover {
+        color: var(--ink);
+      }
+      .navlinks a.active {
+        color: var(--ink);
+      }
+      .navcta {
+        font-size: 13px;
+        border: 1px solid var(--ink);
+        padding: 7px 14px;
+        border-radius: 100px;
+      }
+      .navcta:hover {
+        background: var(--ink);
+        color: #fff;
+      }
+      .burger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      #mmenu {
+        display: none;
+      }
+      @media (max-width: 720px) {
+        .navlinks,
+        .navcta {
+          display: none;
+        }
+        .burger {
+          display: block;
+        }
+        #mmenu.open {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          padding: 8px 24px 24px;
+          border-bottom: 1px solid var(--line);
+          font-size: 15px;
+        }
+      }
+
+      /* hero */
+      .hero {
+        min-height: 88vh;
+        display: flex;
+        align-items: center;
+        padding: 60px 0 40px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.9fr;
+        gap: 48px;
+        align-items: center;
+      }
+      @media (max-width: 780px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-photo {
+          order: -1;
+          max-width: 220px;
+          margin: 0 0 8px;
+        }
+      }
+      .hero-photo {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 10px;
+      }
+      .hero-photo img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 14px;
+        filter: grayscale(1) contrast(1.05);
+        display: block;
+      }
+      .hero-photo p {
+        font-size: 12px;
+        color: var(--muted);
+        text-align: center;
+        margin: 10px 0 2px;
+      }
+      .eyebrow {
+        font-size: 13px;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-size: clamp(2.4rem, 6vw, 4.2rem);
+        line-height: 1.03;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 20px;
+      }
+      .hero p {
+        font-size: 17px;
+        line-height: 1.65;
+        color: #454852;
+        max-width: 560px;
+        margin: 0 0 14px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        background: var(--ink);
+        color: #fff;
+        padding: 13px 22px;
+        border-radius: 100px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .btn-primary:hover {
+        background: var(--accent);
+      }
+      .btn-ghost {
+        border: 1px solid var(--line);
+        padding: 13px 22px;
+        border-radius: 100px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .btn-ghost:hover {
+        border-color: var(--ink);
+      }
+
+      /* section rhythm */
+      section {
+        padding: 110px 0;
+        border-top: 1px solid var(--line);
+      }
+      .kicker {
+        font-size: 13px;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-bottom: 10px;
+      }
+      h2.title {
+        font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 44px;
+      }
+
+      /* about */
+      .lede {
+        font-size: 19px;
+        line-height: 1.75;
+        color: #333640;
+        max-width: 640px;
+        margin-bottom: 60px;
+      }
+      .lede strong {
+        color: var(--ink);
+      }
+      .tech-label {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-bottom: 18px;
+      }
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+      }
+      .tech-chip {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 16px 10px;
+        text-align: center;
+        font-size: 13px;
+        color: #333640;
+        background: #fff;
+      }
+
+      /* qualifications list */
+      .qual {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px 0;
+        border-top: 1px solid var(--line);
+      }
+      .qual:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .qual-name {
+        font-weight: 600;
+        font-size: 15.5px;
+      }
+      .qual-meta {
+        font-size: 13px;
+        color: var(--muted);
+        margin-top: 3px;
+      }
+      .qual-year {
+        font-size: 13px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      /* projects */
+      .filters {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .filter-btn {
+        font-size: 13px;
+        padding: 8px 14px;
+        border-radius: 100px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: #454852;
+        cursor: pointer;
+      }
+      .filter-btn.active {
+        background: var(--ink);
+        color: #fff;
+        border-color: var(--ink);
+      }
+
+      .proj {
+        padding: 32px 0;
+        border-top: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 28px;
+      }
+      .proj:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      @media (max-width: 640px) {
+        .proj {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+      .proj-cat {
+        font-size: 12.5px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding-top: 3px;
+      }
+      .proj-name {
+        font-size: 19px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin-bottom: 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .proj-name svg {
+        width: 15px;
+        height: 15px;
+        color: var(--muted);
+      }
+      a.proj-link:hover .proj-name {
+        color: var(--accent);
+      }
+      a.proj-link:hover .proj-name svg {
+        color: var(--accent);
+      }
+      .proj-desc {
+        font-size: 15px;
+        line-height: 1.65;
+        color: #454852;
+        max-width: 620px;
+        margin-bottom: 14px;
+      }
+      .proj-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .proj-tags span {
+        font-size: 11.5px;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        padding: 3px 9px;
+        border-radius: 100px;
+      }
+
+      /* goals */
+      .quote-block {
+        border-left: 3px solid var(--accent);
+        padding: 4px 0 4px 24px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: var(--ink);
+        max-width: 680px;
+        margin-bottom: 56px;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 500;
+      }
+      .goal-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      @media (max-width: 640px) {
+        .goal-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .goal-item h4 {
+        font-size: 15px;
+        margin: 0 0 8px;
+      }
+      .goal-item p {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* contact - full bleed like reference */
+      .contact-section {
+        border-top: 1px solid var(--line);
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      .contact-inner {
+        margin: 0 auto;
+        max-width: 640px;
+      }
+      .contact-section h2 {
+        font-size: clamp(2.2rem, 6vw, 3.4rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 22px;
+      }
+      .contact-section p {
+        font-size: 16.5px;
+        color: #454852;
+        line-height: 1.65;
+        margin: 0 0 36px;
+      }
+      .contact-row {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+      .contact-links a:hover {
+        color: var(--ink);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 26px 0;
+        font-size: 12.5px;
+        color: var(--muted);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
       }
     </style>
   </head>
-  <body class="bg-slate-50 text-slate-900 pt-20 antialiased">
-    <!-- Header Navigation -->
-    <nav
-      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md border-b border-slate-200/80 z-50 transition-all"
-    >
-      <div class="max-w-6xl mx-auto px-6 sm:px-8">
-        <div class="flex items-center justify-between h-16">
-          <div class="shrink-0">
+  <body>
+    <header>
+      <div class="wrap nav-inner">
+        <a href="#" class="word">Emmanuel Obiero</a>
+        <nav class="navlinks">
+          <a href="#about">About</a>
+          <a href="#qualifications">Background</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Work</a>
+          <a href="#goals">Direction</a>
+        </nav>
+        <a href="#contact" class="navcta">Get in touch</a>
+        <button
+          class="burger"
+          onclick="document.getElementById('mmenu').classList.toggle('open')"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mmenu">
+        <a href="#about">About</a>
+        <a href="#qualifications">Background</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Work</a>
+        <a href="#goals">Direction</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" style="border-top: none">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">
+            Nairobi, Kenya · Full-Stack Software Engineer
+          </div>
+          <h1>I build software for people<br />the internet forgets.</h1>
+          <p>
+            Matatu conductors, smallholder farmers, small shop owners — most of
+            my projects start with someone who has a real problem and no
+            reliable data connection. I write the backend, wire up the AI, and
+            ship something they can actually use.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">See the work</a>
             <a
-              href="#"
-              class="text-sm font-bold tracking-wider text-slate-900 hover:text-indigo-600 transition-colors"
+              href="Emmanuel_Makori_Obiero_Resume.pdf"
+              class="btn-ghost"
+              download
+              >Download resume</a
             >
-              EMMANUEL OBIERO
-            </a>
-          </div>
-
-          <div class="hidden md:block">
-            <div
-              class="ml-10 flex items-center space-x-8 text-sm font-medium text-slate-600"
-            >
-              <a href="#about" class="hover:text-slate-900 transition-colors"
-                >About</a
-              >
-              <a
-                href="#education"
-                class="hover:text-slate-900 transition-colors"
-                >Qualifications</a
-              >
-              <a href="#projects" class="hover:text-slate-900 transition-colors"
-                >Projects</a
-              >
-              <a href="#goals" class="hover:text-slate-900 transition-colors"
-                >Goals</a
-              >
-              <a
-                href="#contact"
-                class="px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors shadow-sm"
-              >
-                Get in Touch
-              </a>
-            </div>
-          </div>
-
-          <div class="md:hidden flex items-center">
-            <button
-              onclick="
-                document
-                  .getElementById('mobile-menu')
-                  .classList.toggle('hidden')
-              "
-              type="button"
-              class="p-2 text-slate-600 hover:text-slate-900 focus:outline-none"
-            >
-              <span class="sr-only">Open Menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
           </div>
         </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div
-        class="hidden bg-white border-b border-slate-200 shadow-lg"
-        id="mobile-menu"
-      >
-        <div class="px-6 pt-4 pb-6 space-y-3 text-base font-medium">
-          <a
-            href="#about"
-            onclick="
-              document.getElementById('mobile-menu').classList.add('hidden')
-            "
-            class="block py-2 text-slate-600 hover:text-slate-900"
-            >About</a
-          >
-          <a
-            href="#education"
-            onclick="
-              document.getElementById('mobile-menu').classList.add('hidden')
-            "
-            class="block py-2 text-slate-600 hover:text-slate-900"
-            >Qualifications & Skills</a
-          >
-          <a
-            href="#projects"
-            onclick="
-              document.getElementById('mobile-menu').classList.add('hidden')
-            "
-            class="block py-2 text-slate-600 hover:text-slate-900"
-            >Projects</a
-          >
-          <a
-            href="#goals"
-            onclick="
-              document.getElementById('mobile-menu').classList.add('hidden')
-            "
-            class="block py-2 text-slate-600 hover:text-slate-900"
-            >Goals</a
-          >
-          <a
-            href="#contact"
-            onclick="
-              document.getElementById('mobile-menu').classList.add('hidden')
-            "
-            class="block mt-4 px-4 py-2.5 bg-slate-900 text-white text-center rounded-lg shadow-sm"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Main Introduction Section -->
-    <section
-      id="about"
-      class="min-h-[85vh] flex items-center bg-gradient-to-b from-slate-50 via-white to-slate-50 py-16 px-6 sm:px-8"
-    >
-      <div class="max-w-6xl mx-auto w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <!-- Text Content -->
-          <div class="lg:col-span-7 space-y-6">
-            <div
-              class="inline-flex items-center space-x-2 text-indigo-600 text-sm font-semibold tracking-wide uppercase"
-            >
-              <span>Software Engineer Portfolio</span>
-            </div>
-
-            <h1
-              class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight"
-            >
-              Emmanuel Makori Obiero
-            </h1>
-
-            <p class="text-xl font-medium text-slate-600">
-              Full-Stack Software Engineer
-            </p>
-
-            <p class="text-base text-slate-600 leading-relaxed max-w-xl">
-              Building scalable web applications requires a comprehensive
-              understanding of end-to-end architecture. By seamlessly bridging
-              frontend user interfaces with robust backend infrastructure, I
-              transform complex data into intuitive digital products built for
-              high performance.
-            </p>
-
-            <p class="text-base text-slate-600 leading-relaxed max-w-xl">
-              With a strong foundation rooted in data analysis and IT systems,
-              every project is engineered with reliability and growth in mind.
-              From optimizing database queries to deploying web environments, my
-              focus is designing technology tailored to solve real-world
-              challenges.
-            </p>
-
-            <div class="pt-4 flex flex-wrap gap-4">
-              <a
-                href="#projects"
-                class="px-5 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-100"
-              >
-                View my projects
-              </a>
-              <a
-                href="#education"
-                class="px-5 py-3 bg-white text-slate-700 font-medium rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors shadow-sm"
-              >
-                View qualifications
-              </a>
-            </div>
-          </div>
-
-          <!-- Image & Quick Specs Side Block -->
-          <div class="lg:col-span-5 space-y-6">
-            <div
-              class="bg-white p-4 rounded-2xl shadow-sm border border-slate-200/60 max-w-sm mx-auto lg:ml-auto"
-            >
-              <img
-                src="My image.jpeg"
-                alt="Emmanuel Makori Obiero"
-                class="w-full h-auto rounded-xl object-cover aspect-[4/5] shadow-inner grayscale contrast-115"
-              />
-              <p class="text-xs text-slate-400 mt-3 text-center font-medium">
-                Emmanuel Makori Obiero, Software Engineer.
-              </p>
-            </div>
-
-            <!-- Profile Summary Card -->
-            <div
-              class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/60 max-w-sm mx-auto lg:ml-auto"
-            >
-              <h3
-                class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4"
-              >
-                Core Areas
-              </h3>
-              <div class="space-y-3 text-sm text-slate-600">
-                <div
-                  class="flex justify-between border-b border-slate-100 pb-2"
-                >
-                  <span class="font-medium text-slate-900">Main Focus</span>
-                  <span>Full-Stack Engineering</span>
-                </div>
-                <div
-                  class="flex justify-between border-b border-slate-100 pb-2"
-                >
-                  <span class="font-medium text-slate-900">Primary Stack</span>
-                  <span>Node.js, React, Express</span>
-                </div>
-                <div
-                  class="flex justify-between border-b border-slate-100 pb-2"
-                >
-                  <span class="font-medium text-slate-900"
-                    >Data & Analysis</span
-                  >
-                  <span>MongoDB & Power BI</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="font-medium text-slate-900">Infrastructure</span>
-                  <span>IT Essentials & Networks</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="hero-photo">
+          <img src="My image.jpeg" alt="Emmanuel Makori Obiero" />
+          <p>Emmanuel Makori Obiero</p>
         </div>
       </div>
     </section>
 
-    <!-- Qualifications Section -->
-    <section
-      id="education"
-      class="py-20 bg-slate-100/60 border-y border-slate-200/60 px-6 sm:px-8"
-    >
-      <div class="max-w-6xl mx-auto">
-        <div class="mb-12">
-          <p
-            class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2"
-          >
-            Background Summary
-          </p>
-          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
-            Qualifications & Skills
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <!-- Timeline Area -->
-          <div class="lg:col-span-7 space-y-8">
-            <h3 class="text-lg font-semibold text-slate-900 mb-6">
-              Education & Certifications
-            </h3>
-
-            <div class="space-y-6">
-              <!-- Item -->
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40 relative"
-              >
-                <div
-                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"
-                >
-                  <h4 class="text-lg font-bold text-slate-900">
-                    Full-Stack Software Development
-                  </h4>
-                  <span
-                    class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md self-start sm:self-auto"
-                    >Current</span
-                  >
-                </div>
-                <p class="text-sm text-slate-500">GOMYCODE • 2026</p>
-              </div>
-
-              <!-- Item -->
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40 relative"
-              >
-                <div
-                  class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2"
-                >
-                  <h4 class="text-lg font-bold text-slate-900">
-                    Augmenting Language Models using RAG
-                  </h4>
-                  <span
-                    class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md self-start sm:self-auto"
-                    >Specialization</span
-                  >
-                </div>
-                <p class="text-sm text-slate-500">
-                  NVIDIA (Online Self-Taught) • 2026
-                </p>
-              </div>
-
-              <!-- Item -->
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40"
-              >
-                <h4 class="text-lg font-bold text-slate-900 mb-1">
-                  Microsoft Elevate AI & AI Fluency
-                </h4>
-                <p class="text-sm text-slate-500">
-                  ICT Authority & PLP Africa • 2026
-                </p>
-              </div>
-
-              <!-- Item -->
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40"
-              >
-                <h4 class="text-lg font-bold text-slate-900 mb-1">
-                  IT Essentials Certification
-                </h4>
-                <p class="text-sm text-slate-500">
-                  AFRALTI (African Advanced Telecommunications Institute) • 2026
-                </p>
-              </div>
-
-              <!-- Item -->
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40"
-              >
-                <h4 class="text-lg font-bold text-slate-900 mb-1">
-                  ICDL Certification (Phases 1 & 2)
-                </h4>
-                <p class="text-sm text-slate-500">Kenyatta University • 2026</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Skills Areas -->
-          <div class="lg:col-span-5 space-y-6">
-            <h3 class="text-lg font-semibold text-slate-900 mb-6">
-              Technical Skills
-            </h3>
-
-            <div
-              class="bg-white p-6 rounded-xl shadow-sm border border-slate-200/40 space-y-4"
-            >
-              <div>
-                <h4
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
-                >
-                  Web Technologies
-                </h4>
-                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >MongoDB</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Express.js</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >React.js</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Node.js</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Frontend Design</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Backend Architecture</span
-                  >
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-slate-100">
-                <h4
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
-                >
-                  Intelligence Infrastructure
-                </h4>
-                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >RAG Systems</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >LLM Engineering</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >AI Integration</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Microsoft Elevate Suite</span
-                  >
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-slate-100">
-                <h4
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
-                >
-                  Data & Analysis
-                </h4>
-                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Microsoft Power BI</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Relational Databases</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Advanced Excel</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Digital Consultancy</span
-                  >
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-slate-100">
-                <h4
-                  class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2.5"
-                >
-                  System Hardware & Networking
-                </h4>
-                <div class="flex flex-wrap gap-2 text-sm text-slate-700">
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Routing & Switching</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Hardware Repair</span
-                  >
-                  <span
-                    class="bg-slate-50 border border-slate-200/60 px-3 py-1 rounded-md"
-                    >Digital Literacy</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="kicker">What I do</div>
+        <h2 class="title">
+          Full-stack, with a bias toward AI and infrastructure
+        </h2>
+        <p class="lede">
+          I work in <strong>Node.js, React, and MongoDB</strong> day to day, but
+          the problems I keep coming back to are about getting software to work
+          where infrastructure can't be assumed — offline-first apps, USSD,
+          voice, and retrieval-augmented systems that don't need a fast
+          connection to be useful. I'm currently looking for a team to bring
+          that to.
+        </p>
+        <div class="tech-label">TOOLS I REACH FOR</div>
+        <div class="tech-grid">
+          <div class="tech-chip">Node.js</div>
+          <div class="tech-chip">React</div>
+          <div class="tech-chip">Express</div>
+          <div class="tech-chip">MongoDB</div>
+          <div class="tech-chip">Supabase</div>
+          <div class="tech-chip">Power BI</div>
+          <div class="tech-chip">RAG / LLMs</div>
+          <div class="tech-chip">USSD & IVR</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white px-6 sm:px-8">
-      <div class="max-w-6xl mx-auto">
-        <div class="mb-10">
-          <p
-            class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2"
-          >
-            Selected Work
-          </p>
-          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
-            Projects
-          </h2>
-          <p class="text-sm text-slate-500 mt-2 max-w-xl">
-            A collection of applications spanning AI, transport, agriculture,
-            e-commerce, and more, each built around a real problem.
-          </p>
-        </div>
+    <!-- QUALIFICATIONS -->
+    <section id="qualifications">
+      <div class="wrap">
+        <div class="kicker">Background</div>
+        <h2 class="title">Education & certifications</h2>
 
-        <!-- Filter buttons -->
-        <div id="filter-bar" class="flex flex-wrap gap-2 mb-10">
-          <button
-            data-filter="all"
-            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-900 text-white transition-colors"
-          >
-            All
-          </button>
-          <button
-            data-filter="education"
-            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-          >
+        <div class="qual">
+          <div>
+            <div class="qual-name">Full-Stack Software Development</div>
+            <div class="qual-meta">GOMYCODE</div>
+          </div>
+          <div class="qual-year">2026 · Current</div>
+        </div>
+        <div class="qual">
+          <div>
+            <div class="qual-name">Artificial Intelligence Training</div>
+            <div class="qual-meta">
+              ICT Authority Kenya, with Pathways Technologies · ID
+              ICTA-1782721075-7426-43916
+            </div>
+          </div>
+          <div class="qual-year">Jun 2026</div>
+        </div>
+        <div class="qual">
+          <div>
+            <div class="qual-name">
+              AI Safari — Agentic frameworks, automation, prompt engineering, AI
+              ethics
+            </div>
+            <div class="qual-meta">PLP Africa · 4-week program</div>
+          </div>
+          <div class="qual-year">2026</div>
+        </div>
+        <div class="qual">
+          <div>
+            <div class="qual-name">ICDL Certification — 9 modules</div>
+            <div class="qual-meta">
+              Computer & Online Essentials, Documents, Spreadsheets,
+              Presentation, Cyber Security, Data Protection, Big Data, IoT, Data
+              Analytics, AI · ID KE10015868
+            </div>
+          </div>
+          <div class="qual-year">Mar–Apr 2026</div>
+        </div>
+        <div class="qual">
+          <div>
+            <div class="qual-name">IT Essentials</div>
+            <div class="qual-meta">AFRALTI, via Cisco Networking Academy</div>
+          </div>
+          <div class="qual-year">Feb 2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="kicker">Experience</div>
+        <h2 class="title">Work</h2>
+
+        <div class="qual">
+          <div>
+            <div class="qual-name">Freelance Web Developer — Writers Admin</div>
+            <div class="qual-meta">
+              Delivered a high-traffic business website on Wix with custom
+              branding and optimized navigation. Held 99.9% uptime and
+              streamlined the conversion flow, driving a measurable increase in
+              client inquiries.
+            </div>
+          </div>
+          <div class="qual-year">2026</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="kicker">Selected work</div>
+        <h2 class="title">Projects</h2>
+
+        <div class="filters" id="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="education">
             Education / AI
           </button>
-          <button
-            data-filter="transport"
-            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-          >
-            Transport
-          </button>
-          <button
-            data-filter="agriculture"
-            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-          >
+          <button class="filter-btn" data-filter="transport">Transport</button>
+          <button class="filter-btn" data-filter="agriculture">
             Agriculture
           </button>
-          <button
-            data-filter="ecommerce"
-            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-          >
-            E-Commerce
-          </button>
-          <button
-            data-filter="valentines"
-            class="filter-btn px-4 py-2 text-sm font-medium rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
-          >
-            Valentines
+          <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+          <button class="filter-btn" data-filter="valentines">
+            Just for fun
           </button>
         </div>
 
-        <!-- Project grid -->
-        <div
-          id="project-grid"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <!-- Jarvis -->
-          <div class="project-card" data-category="education">
-            <a
-              href="https://github.com/Emmanuel-Makori-Obiero/Jarvis"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md"
-                  >Education & AI</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">Jarvis</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Most AI copilots are locked to a browser tab or a single paid
-                IDE plugin, which is out of reach for students and junior
-                developers who can't justify multiple subscriptions. Jarvis is a
-                single voice driven assistant that follows the user across
-                desktop, mobile, and their code editor. It manages tasks by
-                voice, reads and edits files directly inside VS Code, runs
-                research on demand, and remembers context between sessions. For
-                self taught developers building skills without paid tooling, it
-                collapses several $10 to $20 per month tools into one free,
-                cross platform assistant, lowering the cost of entry into
-                serious software work.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >React + TypeScript</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Electron</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Capacitor (Android)</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Gemini API</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Supabase</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >VS Code Extension</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-indigo-600"
-                >Live demo →</span
+        <div id="project-grid">
+          <div class="proj project-card" data-category="education">
+            <div class="proj-cat">Education / AI</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://github.com/Emmanuel-Makori-Obiero/Jarvis"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Jarvis
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                Most AI copilots are locked to one editor's paid plugin, which
+                junior developers can't always justify. Jarvis is one
+                voice-driven assistant that follows you across desktop, mobile,
+                and VS Code — it edits files, runs research, and remembers
+                context between sessions. It's my attempt at collapsing several
+                $10-20/month tools into one free assistant.
+              </p>
+              <div class="proj-tags">
+                <span>React + TypeScript</span><span>Electron</span
+                ><span>Capacitor</span><span>Gemini API</span
+                ><span>Supabase</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Eduvance -->
-          <div class="project-card" data-category="education">
-            <a
-              href="https://eduvancereal.base44.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md"
-                  >Education & AI</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">Eduvance</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Students already spend hours a day on social media and gaming,
-                chasing the same dopamine loop that makes those platforms hard
-                to put down. Eduvance redirects that same pull toward studying
-                instead of fighting it. A student uploads their class notes, and
-                the platform turns them into games and anime style lessons that
-                teach the material visually. There is also a space where
-                students write and share their own notes with each other,
-                turning revision into something social rather than solitary. The
-                goal is simple: keep the addictive engagement students already
-                have, but point it at learning instead of away from it.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Base44</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >AI Content Generation</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Gamified Learning</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Peer Note Sharing</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-indigo-600"
-                >Live demo →</span
+          <div class="proj project-card" data-category="education">
+            <div class="proj-cat">Education / AI</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://eduvancereal.base44.app"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Eduvance
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                Students already spend hours a day chasing the dopamine loop of
+                social media. Eduvance points that same pull at studying instead
+                — upload class notes and it turns them into games and
+                anime-style lessons, plus a space to write and share notes with
+                classmates. Optimized API routes cut data retrieval latency by
+                25%.
+              </p>
+              <div class="proj-tags">
+                <span>Base44</span><span>AI content generation</span
+                ><span>Gamified learning</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Matu -->
-          <div class="project-card" data-category="transport">
-            <a
-              href="https://matu-gamma.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md"
-                  >Transport</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">Matu</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Matatus move most of Kenya, but booking one still means standing
-                at a stage guessing when a vehicle will show up, with no way to
-                reserve a seat or know if it is full. Matu turns that into a
-                real booking system. Passengers pick a route, book a seat, pay
-                through M-Pesa, and track their vehicle live on a map. Drivers
-                manage their trips and bookings from the road, and sacco admins
-                oversee their fleet, drivers, and commission from one dashboard.
-                Complaints, wallets, and role based access for passengers,
-                drivers, conductors, and admins are all built in, so the same
-                app serves everyone who touches a single trip, not just the
-                rider.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >React 19 + TanStack Start</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Supabase (Postgres + Auth)</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Mapbox / Leaflet</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >M-Pesa (Daraja API)</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >PWA</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-emerald-600"
-                >Live demo →</span
+          <div class="proj project-card" data-category="transport">
+            <div class="proj-cat">Transport</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://matu-gamma.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Matu
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                Matatus move most of Kenya, but booking one still means guessing
+                at a stage. Matu lets passengers pick a route, book a seat, pay
+                by M-Pesa, and track the vehicle live, while drivers and sacco
+                admins manage trips, fleets, and commissions from their own
+                dashboards.
+              </p>
+              <div class="proj-tags">
+                <span>React 19 + TanStack Start</span><span>Supabase</span
+                ><span>Mapbox/Leaflet</span><span>M-Pesa Daraja API</span
+                ><span>PWA</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Agrion -->
-          <div class="project-card" data-category="agriculture">
-            <a
-              href="https://github.com/Emmanuel-Makori-Obiero/AGRION"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md"
-                  >Agriculture</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">Agrion</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Most smallholder farming advisory apps assume a smartphone and
-                data, but the majority of Nigerian smallholder farmers only have
-                a basic phone and no reliable internet. Agrion works over USSD
-                and voice calls instead, so any farmer can dial in and get real
-                agronomy advice in their own language, no app or smartphone
-                required. Under the hood it pulls verified guidance from IITA
-                crop guides and NiMet weather forecasts stored in a knowledge
-                graph, translates it on the fly, and reads it back as natural
-                sounding speech. Because the advice comes from a structured
-                graph rather than free generation, answers stay accurate and
-                consistent even at telecom speed.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >FastAPI</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Neo4j</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >LangGraph</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Africa's Talking (USSD/IVR)</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >ElevenLabs</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >ChromaDB (RAG)</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-amber-600"
-                >View on GitHub →</span
+          <div class="proj project-card" data-category="agriculture">
+            <div class="proj-cat">Agriculture</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://github.com/Emmanuel-Makori-Obiero/AGRION"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Agrion
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                Most farming apps assume a smartphone and data. Agrion works
+                over USSD and voice calls, so any farmer with a basic phone can
+                dial in and get real agronomy advice in their own language —
+                pulled from a knowledge graph of IITA crop guides and NiMet
+                weather data, not free-generated, so the answers stay accurate
+                even in resource- constrained conditions.
+              </p>
+              <div class="proj-tags">
+                <span>FastAPI</span><span>Neo4j</span><span>LangGraph</span
+                ><span>Africa's Talking</span><span>ElevenLabs</span
+                ><span>ChromaDB</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Sauti ya Shamba -->
-          <div class="project-card" data-category="agriculture">
-            <a
-              href="https://sautiyashamba.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md"
-                  >Agriculture</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">
-                Sauti ya Shamba
-              </h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Around 4.5 million Kenyan farmers face the same problem as Mama
-                Njeri, a real case this project is built around: her crop caught
-                a fungus, her son sent a YouTube link to help, but she had no
-                data to open it, so she bought pesticide from an unqualified
-                seller and lost her entire harvest. Sauti ya Shamba, "the voice
-                of the farm", is built for exactly that gap. It delivers
-                verified crop, market price, and weather guidance over voice
-                calls, USSD, and SMS, in Swahili, so a farmer with a basic phone
-                and zero internet still gets an answer they can act on. Every
-                figure it gives is sourced and citable, so the information
-                replaces guesswork instead of adding to it.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Voice / USSD / SMS</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Swahili Language Support</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Market Price Data</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Sourced/Verified Content</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-amber-600"
-                >Live demo →</span
+          <div class="proj project-card" data-category="agriculture">
+            <div class="proj-cat">Agriculture</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://sautiyashamba.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Sauti ya Shamba
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                Built around a real case: a farmer's crop caught a fungus, she
+                had no data to open the YouTube link her son sent, so she bought
+                the wrong pesticide and lost her harvest. "The voice of the
+                farm" delivers verified crop, price, and weather guidance over
+                voice, USSD, and SMS, in Swahili — every figure sourced and
+                citable.
+              </p>
+              <div class="proj-tags">
+                <span>Voice / USSD / SMS</span><span>Swahili</span
+                ><span>Market price data</span><span>Sourced content</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Dhamana POS -->
-          <div class="project-card" data-category="ecommerce">
-            <a
-              href="https://github.com/Emmanuel-Makori-Obiero/POS"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-md"
-                  >E-Commerce</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">Dhamana POS</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                Cloud based POS systems assume a small shop can afford a
-                reliable internet connection and a monthly subscription just to
-                ring up a sale, which many small retailers cannot. Dhamana POS
-                runs entirely offline on a single Windows computer, so a shop
-                keeps selling even when the internet does not. It handles
-                barcode checkout by scanner or camera, tracks real profit using
-                cost versus selling price, prints sales and profit reports as
-                PDF, and forecasts the next seven days of sales and stockouts
-                using only local sales history. Everything is stored on that one
-                machine, so setup is a double click install rather than a server
-                and a subscription.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Offline-first</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Local API</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Barcode/QR Scanning</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Sales Forecasting</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >PDF Reporting</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-sky-600"
-                >View on GitHub →</span
+          <div class="proj project-card" data-category="ecommerce">
+            <div class="proj-cat">E-Commerce</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://github.com/Emmanuel-Makori-Obiero/POS"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Dhamana POS
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                Cloud POS systems assume a shop can afford steady internet and a
+                monthly fee just to ring up a sale. Dhamana runs fully offline
+                on one Windows machine — barcode checkout, real profit tracking,
+                PDF reports, and a 7-day sales forecast from local history
+                alone. Cut manual reconciliation time by 40% for the shop it was
+                built for.
+              </p>
+              <div class="proj-tags">
+                <span>Offline-first</span><span>Local API</span
+                ><span>Barcode/QR</span><span>Sales forecasting</span
+                ><span>PDF reporting</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Crotchet Store -->
-          <div class="project-card" data-category="ecommerce">
-            <a
-              href="https://e-commerce-store-ten-hazel.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-md"
-                  >E-Commerce</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">
-                TheWrittenWhispers Crochet Store
-              </h3>
-              <p class="text-sm text-slate-600 mb-4">
+          <div class="proj project-card" data-category="ecommerce">
+            <div class="proj-cat">E-Commerce</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://e-commerce-store-ten-hazel.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="proj-name">
+                  TheWrittenWhispers
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
                 Independent crochet makers usually sell through scattered
-                Instagram posts and WhatsApp messages, with no proper catalogue,
-                cart, or way to track orders. This store gives a small handmade
-                business an actual storefront. Sellers get a dashboard to list
-                products with images, categories, and pricing in KSh, while
-                buyers browse bags, hats, decor, and clothing, add items to a
-                cart, and place orders directly. Separate customer and seller
-                accounts mean the same platform serves both sides of the
-                transaction instead of forcing a maker to manage sales manually
-                across chat apps.
+                Instagram posts and WhatsApp threads. This gives a small
+                handmade business an actual storefront — a seller dashboard for
+                listing products in KSh, and a buyer side with cart and
+                checkout.
               </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >HTML/CSS/JS</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Buyer/Seller Roles</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Cart & Checkout</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Seller Dashboard</span
-                >
+              <div class="proj-tags">
+                <span>HTML/CSS/JS</span><span>Buyer/seller roles</span
+                ><span>Cart & checkout</span>
               </div>
-              <span class="text-xs font-semibold text-sky-600"
-                >Live demo →</span
-              >
-            </a>
+            </div>
           </div>
 
-          <!-- Loveletter -->
-          <div class="project-card" data-category="valentines">
-            <a
-              href="https://loveletter-indol-rho.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="block h-full bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-slate-300 transition-all group"
-            >
-              <div class="flex items-center justify-between mb-4">
-                <span
-                  class="text-xs font-semibold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md"
-                  >Valentines</span
-                >
-                <svg
-                  class="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    transform="rotate(-45 12 12)"
-                  />
-                </svg>
-              </div>
-              <h3 class="text-lg font-bold text-slate-900 mb-2">Loveletter</h3>
-              <p class="text-sm text-slate-600 mb-4">
-                A small, personal web app built as a digital love letter. The
-                recipient enters their name on a quiet landing page, and the
-                letter that follows addresses them by name, turning a static
-                page into something that feels written specifically for them. It
-                is a simple idea executed with care: clean typography, a calm
-                layout, and just enough interactivity to make a personal gesture
-                feel personal.
-              </p>
-              <div class="flex flex-wrap gap-1.5 mb-4">
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >HTML/CSS/JS</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >Tailwind CSS</span
-                >
-                <span
-                  class="text-[11px] font-medium text-slate-500 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded"
-                  >URL Personalization</span
-                >
-              </div>
-              <span class="text-xs font-semibold text-rose-600"
-                >Live demo →</span
+          <div class="proj project-card" data-category="valentines">
+            <div class="proj-cat">Just for fun</div>
+            <div>
+              <a
+                class="proj-link"
+                href="https://loveletter-indol-rho.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-            </a>
+                <div class="proj-name">
+                  Loveletter
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
+              </a>
+              <p class="proj-desc">
+                A small personal project: a digital love letter. You type in a
+                name, and the letter that follows addresses you by it. Simple
+                idea, done carefully — quiet layout, clean type, just enough
+                interactivity to make a gesture feel personal.
+              </p>
+              <div class="proj-tags">
+                <span>HTML/CSS/JS</span><span>Tailwind CSS</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1093,13 +988,10 @@
     <script>
       document.querySelectorAll(".filter-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
-          document.querySelectorAll(".filter-btn").forEach((b) => {
-            b.classList.remove("bg-slate-900", "text-white");
-            b.classList.add("bg-slate-100", "text-slate-700");
-          });
-          btn.classList.add("bg-slate-900", "text-white");
-          btn.classList.remove("bg-slate-100", "text-slate-700");
-
+          document
+            .querySelectorAll(".filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
           const filter = btn.dataset.filter;
           document.querySelectorAll(".project-card").forEach((card) => {
             card.style.display =
@@ -1111,359 +1003,96 @@
       });
     </script>
 
-    <!-- Goals Section -->
-    <section id="goals" class="py-20 bg-white px-6 sm:px-8">
-      <div class="max-w-6xl mx-auto">
-        <div class="mb-12">
-          <p
-            class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-2"
-          >
-            Future Strategy
-          </p>
-          <h2 class="text-3xl font-bold tracking-tight text-slate-900">
-            Career Blueprint
-          </h2>
+    <!-- GOALS -->
+    <section id="goals">
+      <div class="wrap">
+        <div class="kicker">Where this is going</div>
+        <h2 class="title">Direction</h2>
+
+        <div class="quote-block">
+          Grow from a hands-on engineer into someone who can lead technology —
+          using AI and full-stack architecture to build software that reaches
+          people most products skip, and to support the developers building
+          alongside me.
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div class="lg:col-span-8 space-y-6">
-            <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-md">
-              <h3
-                class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3"
-              >
-                Core Vision
-              </h3>
-              <p class="text-lg sm:text-xl font-medium leading-relaxed">
-                "To grow from a high-performance engineer into a technology
-                leader—leveraging AI capabilities and full-stack architecture to
-                build innovative software solutions while supporting impactful
-                developer communities."
-              </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div
-                class="border border-slate-200 p-6 rounded-xl bg-slate-50/50"
-              >
-                <h4 class="font-bold text-slate-900 mb-2">
-                  Product Architecture
-                </h4>
-                <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                  Committed to building reliable, highly optimized web
-                  applications that connect seamless consumer interfaces with
-                  powerful backend databases.
-                </p>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                  By mastering modern retrieval frameworks and dynamic code
-                  systems, my focus remains on developing native tools that
-                  enhance productivity.
-                </p>
-              </div>
-
-              <div
-                class="border border-slate-200 p-6 rounded-xl bg-slate-50/50"
-              >
-                <h4 class="font-bold text-slate-900 mb-2">
-                  Leadership & Community
-                </h4>
-                <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                  Actively collaborating with technical teams to share
-                  engineering insights and support a growing network of digital
-                  creators.
-                </p>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                  The long-term objective centers on technology management:
-                  driving product strategy and guiding engineering teams to
-                  launch impactful solutions.
-                </p>
-              </div>
-            </div>
+        <div class="goal-grid">
+          <div class="goal-item">
+            <h4>Product & architecture</h4>
+            <p>
+              Keep building reliable, well-optimized applications that connect
+              clean interfaces to real backend infrastructure — and keep
+              learning modern retrieval and AI systems as they mature.
+            </p>
           </div>
-
-          <!-- Strategic Targets Column -->
-          <div class="lg:col-span-4 space-y-6">
-            <h3 class="text-lg font-semibold text-slate-900">Milestones</h3>
-
-            <div
-              class="bg-white border border-slate-200 p-6 rounded-xl space-y-5 shadow-sm"
-            >
-              <div>
-                <h5 class="font-bold text-sm text-slate-900">
-                  Full-Stack Development
-                </h5>
-                <p class="text-xs text-slate-500 mt-0.5">
-                  Deploying production-ready applications with highly secure,
-                  data-focused databases.
-                </p>
-              </div>
-              <div class="border-t border-slate-100 pt-4">
-                <h5 class="font-bold text-sm text-slate-900">
-                  Advanced AI Implementation
-                </h5>
-                <p class="text-xs text-slate-500 mt-0.5">
-                  Building custom integrations, language models, and search
-                  architectures.
-                </p>
-              </div>
-              <div class="border-t border-slate-100 pt-4">
-                <h5 class="font-bold text-sm text-slate-900">
-                  Community Integration
-                </h5>
-                <p class="text-xs text-slate-500 mt-0.5">
-                  Fostering active collaboration spaces and professional
-                  developer networks.
-                </p>
-              </div>
-              <div class="border-t border-slate-100 pt-4">
-                <h5 class="font-bold text-sm text-indigo-600">
-                  Technology Leadership
-                </h5>
-                <p class="text-xs text-slate-500 mt-0.5">
-                  Founding and scaling tech-focused software platforms in
-                  growing regional markets.
-                </p>
-              </div>
-            </div>
+          <div class="goal-item">
+            <h4>Leadership & community</h4>
+            <p>
+              Collaborate with other engineers, share what I learn, and
+              eventually move toward guiding a team and a product direction, not
+              just writing the code myself.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Communication / Contact Section -->
-    <section id="contact" class="bg-slate-900 text-white py-20 px-6 sm:px-8">
-      <div class="max-w-6xl mx-auto">
-        <div
-          class="border-b border-slate-800 pb-8 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-4"
-        >
-          <div>
-            <p
-              class="text-xs font-bold text-slate-400 uppercase tracking-wide mb-2"
-            >
-              Connect
-            </p>
-            <h2 class="text-3xl font-bold tracking-tight text-white">
-              Contact Information
-            </h2>
-          </div>
-          <div
-            class="text-xs font-semibold bg-white/10 text-slate-200 px-3 py-1.5 rounded-md"
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <div class="wrap contact-inner">
+        <div class="kicker" style="justify-content: center; display: flex">
+          Let's talk
+        </div>
+        <h2>Let's work together</h2>
+        <p>
+          Open to engineering roles and collaborations — especially anything
+          building for people who don't fit the default "always-online"
+          assumption. Reach out and I'll get back to you.
+        </p>
+        <div class="contact-row">
+          <a href="mailto:emmanuelmakobiero@gmail.com" class="btn-primary"
+            >Email me</a
           >
-            Open to new projects
-          </div>
+          <a href="tel:0711617528" class="btn-ghost">Call: 0711 617 528</a>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <!-- Text and Direct Contacts -->
-          <div class="lg:col-span-7 space-y-6">
-            <h3 class="text-xl font-medium text-white">
-              Direct Messages & Projects
-            </h3>
-            <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
-              Whether you are an industry representative looking to expand your
-              engineering team, or a product collaborator seeking to construct
-              clean software architectures, feel free to reach out directly.
-            </p>
-
-            <div class="space-y-3 max-w-md pt-2">
-              <a
-                href="mailto:emmanuelmakobiero@gmail.com"
-                class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/80 transition-all"
-              >
-                <div class="p-2.5 bg-white text-slate-900 rounded-lg">
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="truncate">
-                  <p
-                    class="text-[11px] font-bold tracking-wider text-slate-400 uppercase"
-                  >
-                    Email Address
-                  </p>
-                  <p class="text-sm font-semibold text-white truncate">
-                    emmanuelmakobiero@gmail.com
-                  </p>
-                </div>
-              </a>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <a
-                  href="tel:0711617528"
-                  class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/80 transition-all"
-                >
-                  <div class="p-2.5 bg-white text-slate-900 rounded-lg">
-                    <svg
-                      class="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[11px] font-bold tracking-wider text-slate-400 uppercase"
-                    >
-                      Primary Phone
-                    </p>
-                    <p class="text-sm font-semibold text-white">0711 617 528</p>
-                  </div>
-                </a>
-
-                <a
-                  href="tel:0790558418"
-                  class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/40 border border-slate-800 hover:border-slate-700 hover:bg-slate-800/80 transition-all"
-                >
-                  <div class="p-2.5 bg-white text-slate-900 rounded-lg">
-                    <svg
-                      class="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <p
-                      class="text-[11px] font-bold tracking-wider text-slate-400 uppercase"
-                    >
-                      Secondary Phone
-                    </p>
-                    <p class="text-sm font-semibold text-white">0790 558 418</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social Links Grid -->
-          <div class="lg:col-span-5 space-y-4 w-full">
-            <h3
-              class="text-xs font-bold text-slate-400 uppercase tracking-wider"
-            >
-              External Profiles
-            </h3>
-
-            <div
-              class="p-5 bg-slate-800/30 border border-slate-800 rounded-xl space-y-4"
-            >
-              <div class="flex items-center gap-3">
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-                  />
-                </svg>
-                <span class="text-sm font-semibold text-white">LinkedIn</span>
-              </div>
-              <p class="text-xs text-slate-400">
-                Connect professionally and review industry networks.
-              </p>
-              <a
-                href="https://www.linkedin.com/in/emmanuel-makori-obiero-3125203b5/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full text-center bg-indigo-600 text-white font-medium text-sm py-2.5 rounded-lg hover:bg-indigo-700 transition-colors shadow-md shadow-indigo-900/20"
-              >
-                Open LinkedIn Profile
-              </a>
-            </div>
-
-            <div
-              class="p-5 bg-slate-800/30 border border-slate-800 rounded-xl space-y-4"
-            >
-              <div class="flex items-center gap-3">
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.008.069-.008 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-sm font-semibold text-white">GitHub</span>
-              </div>
-              <p class="text-xs text-slate-400">
-                Review public repositories and code frameworks.
-              </p>
-              <a
-                href="https://github.com/Emmanuel-Makori-Obiero"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full text-center bg-white text-slate-900 font-medium text-sm py-2.5 rounded-lg hover:bg-slate-100 transition-colors"
-              >
-                Open GitHub Profile
-              </a>
-            </div>
-
-            <div
-              class="p-5 bg-slate-800/30 border border-slate-800 rounded-xl space-y-4"
-            >
-              <div class="flex items-center gap-3">
-                <svg
-                  class="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span class="text-sm font-semibold text-white">Instagram</span>
-              </div>
-              <p class="text-xs text-slate-400">
-                View social updates and personal updates.
-              </p>
-              <a
-                href="https://www.instagram.com/em.makori/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full text-center border border-slate-700 font-medium text-sm py-2.5 rounded-lg hover:bg-slate-800 text-white transition-colors"
-              >
-                Open Social Media
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Footer Meta Info -->
-        <div
-          class="border-t border-slate-800 mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4"
-        >
-          <p>© 2026 Emmanuel Makori Obiero. All Rights Reserved.</p>
-          <p>Built with HTML & Tailwind CSS</p>
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/emmanuel-makori-obiero-3125203b5/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/Emmanuel-Makori-Obiero"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.instagram.com/em.makori/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+          <a href="tel:0790558418">0790 558 418</a>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div
+        class="wrap"
+        style="
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 8px;
+          width: 100%;
+        "
+      >
+        <p>© 2026 Emmanuel Makori Obiero</p>
+        <p>Nairobi, Kenya</p>
+      </div>
+    </footer>
   </body>
 </html>
